@@ -2,7 +2,13 @@
 
 A 32-bit, ARM LEGv8-inspired instruction set architecture (ISA) simulator written in C++20. It was built as the final project for **CS535** by James Dolle and Pablo Ghezzi. It includes a pipeline simulator, a Qt desktop UI, and a Python assembler.
 
-![Image Example of Project](example.jpg)
+**Desktop simulator interface**
+
+![DEEPRED desktop simulator showing cache, register, memory, and pipeline views](docs/example.png)
+
+**PPU output: Tetris demo**
+
+![Tetris title screen rendered by the simulated PPU](docs/tetris_example.png)
 
 
 ## Table of contents
