@@ -2,7 +2,7 @@
 
 A 32-bit, ARM LEGv8-inspired instruction set architecture (ISA) simulator written in C++20. It was built as the final project for **CS535** by James Dolle and Pablo Ghezzi. It includes a pipeline simulator, a Qt desktop UI, and a Python assembler.
 
-![Image Example of Project](example.jpg)
+![Image Example of Project](example.png)
 
 
 ## Table of contents
