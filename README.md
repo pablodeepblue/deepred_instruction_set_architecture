@@ -1,6 +1,6 @@
 # DEEPRED ISA
 
-A 32-bit, ARM LEGv8-inspired instruction set architecture (ISA) simulator written in C++17. It was built as the final project for **CS535** by James Dolle and Pablo Ghezzi.
+A 32-bit, ARM LEGv8-inspired instruction set architecture (ISA) simulator written in C++17. It was built as the final project for **CS535** by James Dolle and Pablo Ghezzi. It comes with a full pipeline simulator and a small assembler/compiler written in python.
 
 ![Image Example of Project](example.jpg)
 
