@@ -35,5 +35,6 @@ extra
 *.out
 *.app
 f.txt
+/build/
 /.vscode
 /.vscode

@@ -1,0 +1,18 @@
+-d 
+-i bin/demo.bin
+0x000(000): 0x400005f0 		addi 	D	 Imm 5 	Rn XZR 	Rd X0
+0x004(004): 0x400001f1 		addi 	D	 Imm 1 	Rn XZR 	Rd X1
+0x008(008): 0x400040f2 		addi 	D	 Imm 64 	Rn XZR 	Rd X2
+0x00C(012): 0x400044f3 		addi 	D	 Imm 68 	Rn XZR 	Rd X3
+0x010(016): 0x50000020 		stur 	D	 Imm 0 	Rn X2 	Rd X0
+0x014(020): 0x50000031 		stur 	D	 Imm 0 	Rn X3 	Rd X1
+0x018(024): 0x45000035 		ldur 	D	 Imm 0 	Rn X3 	Rd X5
+0x01C(028): 0x45000036 		ldur 	D	 Imm 0 	Rn X3 	Rd X6
+0x020(032): 0x80000004 		b    	B	 branch to 0x00000024
+0x024(036): 0x2100005f 		sub  	R	 Rm 0 	SHAMT 0 	Rn X5 	Rd XZR
+0x028(040): 0x8100000c 		beq  	B	 branch to 0x00000034
+0x02C(044): 0x20060055 		add  	R	 Rm 6 	SHAMT 0 	Rn X5 	Rd X5
+0x030(048): 0x80fffff4 		b    	B	 branch to 0x00000024
+0x034(052): 0x40000155 		addi 	D	 Imm 1 	Rn X5 	Rd X5
+0x038(056): 0x50000025 		stur 	D	 Imm 0 	Rn X2 	Rd X5
+0x03C(060): 0x00000000 		hlt  	H	 0

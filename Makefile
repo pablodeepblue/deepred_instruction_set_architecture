@@ -1,24 +1,28 @@
-CXX = g++
+CMAKE ?= cmake
 
-CXXFLAGS = -Wall -Wextra -Wshadow -O3 -std=c++17
+BUILD_DIR := build
+APP := $(BUILD_DIR)/deepred
 
-EXECUTABLE = main
+.PHONY: all configure run check clean FORCE
+.NOTPARALLEL: clean check
 
-SRC := ./src
-BUILD := ./build
-LIBS = ./lib
-INCLUDES = ./include
-OBJ := obj
+all: $(APP)
 
-all: $(BUILD)/$(EXECUTABLE)
+configure: $(BUILD_DIR)/CMakeCache.txt
 
-$(BUILD)/$(EXECUTABLE): $(SRC)/$(EXECUTABLE).cpp
-	$(CXX) -L$(LIBS) -I$(INCLUDES) $^ -o $@ $(CXXFLAGS)
+$(BUILD_DIR)/CMakeCache.txt: CMakeLists.txt
+	$(CMAKE) -S . -B $(BUILD_DIR) -DCMAKE_BUILD_TYPE=Release
 
-run: $(BUILD)/$(EXECUTABLE)
-	$(BUILD)/$(EXECUTABLE)
+$(APP): FORCE $(BUILD_DIR)/CMakeCache.txt
+	$(CMAKE) --build $(BUILD_DIR) --config Release
 
+run: $(APP)
+	./$(APP)
 
-memory_manager: memdrive
-memdrive : $(SRC)/memdrive.cpp
-	$(CXX) -L$(LIBS) -I$(INCLUDES) $^ -o $@  $(CXXFLAGS)
+# CI uses this target: compile the GUI without attempting to open a display.
+check: $(APP)
+
+clean:
+	$(CMAKE) -E rm -rf $(BUILD_DIR)
+
+FORCE:

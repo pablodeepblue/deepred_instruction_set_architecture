@@ -1,0 +1,47 @@
+-d 
+-i bin/branchtest.bin
+0x000(000): 0xa1ffff03 		movz 	IM	 Imm FFFF 	SH 0 	Rt X3
+0x004(004): 0x40ffff3f 		addi 	D	 Imm 65535 	Rn X3 	Rd XZR
+0x008(008): 0x410000ff 		subi 	D	 Imm 0 	Rn XZR 	Rd XZR
+0x00C(012): 0x81000008 		beq  	B	 branch to 0x00000014
+0x010(016): 0x00000000 		hlt  	H	 0
+0x014(020): 0x40000100 		addi 	D	 Imm 1 	Rn X0 	Rd X0
+0x018(024): 0x410001ff 		subi 	D	 Imm 1 	Rn XZR 	Rd XZR
+0x01C(028): 0x83000008 		bne  	B	 branch to 0x00000024
+0x020(032): 0x00000000 		hlt  	H	 0
+0x024(036): 0x40000100 		addi 	D	 Imm 1 	Rn X0 	Rd X0
+0x028(040): 0x410001ff 		subi 	D	 Imm 1 	Rn XZR 	Rd XZR
+0x02C(044): 0x84000008 		blt  	B	 branch to 0x00000034
+0x030(048): 0x00000000 		hlt  	H	 0
+0x034(052): 0x40000100 		addi 	D	 Imm 1 	Rn X0 	Rd X0
+0x038(056): 0x410001ff 		subi 	D	 Imm 1 	Rn XZR 	Rd XZR
+0x03C(060): 0x85000008 		ble  	B	 branch to 0x00000044
+0x040(064): 0x00000000 		hlt  	H	 0
+0x044(068): 0x40000100 		addi 	D	 Imm 1 	Rn X0 	Rd X0
+0x048(072): 0x41ffffff 		subi 	D	 Imm 65535 	Rn XZR 	Rd XZR
+0x04C(076): 0x86000008 		bgt  	B	 branch to 0x00000054
+0x050(080): 0x00000000 		hlt  	H	 0
+0x054(084): 0x40000100 		addi 	D	 Imm 1 	Rn X0 	Rd X0
+0x058(088): 0x410000ff 		subi 	D	 Imm 0 	Rn XZR 	Rd XZR
+0x05C(092): 0x87000008 		bge  	B	 branch to 0x00000064
+0x060(096): 0x00000000 		hlt  	H	 0
+0x064(100): 0x40000100 		addi 	D	 Imm 1 	Rn X0 	Rd X0
+0x068(104): 0xa1000101 		movz 	IM	 Imm 0001 	SH 0 	Rt X1
+0x06C(108): 0xa1000202 		movz 	IM	 Imm 0002 	SH 0 	Rt X2
+0x070(112): 0x210100ff 		sub  	R	 Rm 1 	SHAMT 0 	Rn XZR 	Rd XZR
+0x074(116): 0x88000008 		blo  	B	 branch to 0x0000007C
+0x078(120): 0x00000000 		hlt  	H	 0
+0x07C(124): 0x40000100 		addi 	D	 Imm 1 	Rn X0 	Rd X0
+0x080(128): 0x410000ff 		subi 	D	 Imm 0 	Rn XZR 	Rd XZR
+0x084(132): 0x89000008 		bls  	B	 branch to 0x0000008C
+0x088(136): 0x00000000 		hlt  	H	 0
+0x08C(140): 0x40000100 		addi 	D	 Imm 1 	Rn X0 	Rd X0
+0x090(144): 0x210f001f 		sub  	R	 Rm 15 	SHAMT 0 	Rn X1 	Rd XZR
+0x094(148): 0x8a000008 		bhi  	B	 branch to 0x0000009C
+0x098(152): 0x00000000 		hlt  	H	 0
+0x09C(156): 0x40000100 		addi 	D	 Imm 1 	Rn X0 	Rd X0
+0x0A0(160): 0x410000ff 		subi 	D	 Imm 0 	Rn XZR 	Rd XZR
+0x0A4(164): 0x8b000008 		bhs  	B	 branch to 0x000000AC
+0x0A8(168): 0x00000000 		hlt  	H	 0
+0x0AC(172): 0x40000100 		addi 	D	 Imm 1 	Rn X0 	Rd X0
+0x0B0(176): 0x00000000 		hlt  	H	 0

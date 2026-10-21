@@ -1,0 +1,12 @@
+-d 
+-i bin/add.bin
+0x000(000): 0x40000100 		addi 	D	 Imm 1 	Rn X0 	Rd X0
+0x004(004): 0x20000000 		add  	R	 Rm 0 	SHAMT 0 	Rn X0 	Rd X0
+0x008(008): 0x2100000f 		sub  	R	 Rm 0 	SHAMT 0 	Rn X0 	Rd XZR
+0x00C(012): 0x20000000 		add  	R	 Rm 0 	SHAMT 0 	Rn X0 	Rd X0
+0x010(016): 0x2100000f 		sub  	R	 Rm 0 	SHAMT 0 	Rn X0 	Rd XZR
+0x014(020): 0x20000000 		add  	R	 Rm 0 	SHAMT 0 	Rn X0 	Rd X0
+0x018(024): 0x2100000f 		sub  	R	 Rm 0 	SHAMT 0 	Rn X0 	Rd XZR
+0x01C(028): 0x20000000 		add  	R	 Rm 0 	SHAMT 0 	Rn X0 	Rd X0
+0x020(032): 0x2100000f 		sub  	R	 Rm 0 	SHAMT 0 	Rn X0 	Rd XZR
+0x024(036): 0x00000000 		hlt  	H	 0

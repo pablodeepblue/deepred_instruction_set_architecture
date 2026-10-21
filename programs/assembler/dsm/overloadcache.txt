@@ -1,0 +1,12 @@
+-d 
+-i bin/overloadcache.bin
+0x000(000): 0x430024f1 		orri 	D	 Imm 36 	Rn XZR 	Rd X1
+0x004(004): 0xa1000000 		movz 	IM	 Imm 0000 	SH 0 	Rt X0
+0x008(008): 0x4101080f 		subi 	D	 Imm 264 	Rn X0 	Rd XZR
+0x00C(012): 0x81000014 		beq  	B	 branch to 0x00000020
+0x010(016): 0x50000010 		stur 	D	 Imm 0 	Rn X1 	Rd X0
+0x014(020): 0x40000411 		addi 	D	 Imm 4 	Rn X1 	Rd X1
+0x018(024): 0x40000100 		addi 	D	 Imm 1 	Rn X0 	Rd X0
+0x01C(028): 0x80ffffec 		b    	B	 branch to 0x00000008
+0x020(032): 0x00000000 		hlt  	H	 0
+0x024(036): 0x00000000 		hlt  	H	 0

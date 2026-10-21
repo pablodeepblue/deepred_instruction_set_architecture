@@ -1,0 +1,1354 @@
+-d 
+-i bin/tetris.bin
+0x000(000): 0xa1010000 		movz 	IM	 Imm 0100 	SH 0 	Rt X0
+0x004(004): 0x4115200f 		subi 	D	 Imm 5408 	Rn X0 	Rd XZR
+0x008(008): 0x81000018 		beq  	B	 branch to 0x00000020
+0x00C(012): 0x45000001 		ldur 	D	 Imm 0 	Rn X0 	Rd X1
+0x010(016): 0x410004dd 		subi 	D	 Imm 4 	Rn XSP 	Rd XSP
+0x014(020): 0x500000d1 		stur 	D	 Imm 0 	Rn XSP 	Rd X1
+0x018(024): 0x40000400 		addi 	D	 Imm 4 	Rn X0 	Rd X0
+0x01C(028): 0x80ffffe8 		b    	B	 branch to 0x00000004
+0x020(032): 0xa1000310 		movz 	IM	 Imm 0003 	SH 1 	Rt X0
+0x024(036): 0xa0eae000 		movk 	IM	 Imm EAE0 	SH 0 	Rt X0
+0x028(040): 0xa1307b11 		movz 	IM	 Imm 307B 	SH 1 	Rt X1
+0x02C(044): 0xa0006001 		movk 	IM	 Imm 0060 	SH 0 	Rt X1
+0x030(048): 0xa1307b12 		movz 	IM	 Imm 307B 	SH 1 	Rt X2
+0x034(052): 0xa0006802 		movk 	IM	 Imm 0068 	SH 0 	Rt X2
+0x038(056): 0xa1387b13 		movz 	IM	 Imm 387B 	SH 1 	Rt X3
+0x03C(060): 0xa0006803 		movk 	IM	 Imm 0068 	SH 0 	Rt X3
+0x040(064): 0xa1387b14 		movz 	IM	 Imm 387B 	SH 1 	Rt X4
+0x044(068): 0xa0006004 		movk 	IM	 Imm 0060 	SH 0 	Rt X4
+0x048(072): 0xa1080015 		movz 	IM	 Imm 0800 	SH 1 	Rt X5
+0x04C(076): 0x50000001 		stur 	D	 Imm 0 	Rn X0 	Rd X1
+0x050(080): 0x50000402 		stur 	D	 Imm 4 	Rn X0 	Rd X2
+0x054(084): 0x50000803 		stur 	D	 Imm 8 	Rn X0 	Rd X3
+0x058(088): 0x50000c04 		stur 	D	 Imm 12 	Rn X0 	Rd X4
+0x05C(092): 0xc1000000 		flu  	ME	 3238002688
+0x060(096): 0xc0000000 		ppu  	ME	 3221225472
+0x064(100): 0xa1000006 		movz 	IM	 Imm 0000 	SH 0 	Rt X6
+0x068(104): 0x4100136f 		subi 	D	 Imm 19 	Rn X6 	Rd XZR
+0x06C(108): 0x81000080 		beq  	B	 branch to 0x000000EC
+0x070(112): 0xa1000008 		movz 	IM	 Imm 0000 	SH 0 	Rt X8
+0x074(116): 0x4100648f 		subi 	D	 Imm 100 	Rn X8 	Rd XZR
+0x078(120): 0x8100004c 		beq  	B	 branch to 0x000000C4
+0x07C(124): 0xc3000007 		inp  	ME	 3271557127
+0x080(128): 0x4100067f 		subi 	D	 Imm 6 	Rn X7 	Rd XZR
+0x084(132): 0x83000014 		bne  	B	 branch to 0x00000098
+0x088(136): 0x41000811 		subi 	D	 Imm 8 	Rn X1 	Rd X1
+0x08C(140): 0x41000822 		subi 	D	 Imm 8 	Rn X2 	Rd X2
+0x090(144): 0x41000833 		subi 	D	 Imm 8 	Rn X3 	Rd X3
+0x094(148): 0x41000844 		subi 	D	 Imm 8 	Rn X4 	Rd X4
+0x098(152): 0x4100077f 		subi 	D	 Imm 7 	Rn X7 	Rd XZR
+0x09C(156): 0x83000014 		bne  	B	 branch to 0x000000B0
+0x0A0(160): 0x40000811 		addi 	D	 Imm 8 	Rn X1 	Rd X1
+0x0A4(164): 0x40000822 		addi 	D	 Imm 8 	Rn X2 	Rd X2
+0x0A8(168): 0x40000833 		addi 	D	 Imm 8 	Rn X3 	Rd X3
+0x0AC(172): 0x40000844 		addi 	D	 Imm 8 	Rn X4 	Rd X4
+0x0B0(176): 0x260f00f7 		orr  	R	 Rm 15 	SHAMT 0 	Rn XZR 	Rd X7
+0x0B4(180): 0xc1000000 		flu  	ME	 3238002688
+0x0B8(184): 0xc0000000 		ppu  	ME	 3221225472
+0x0BC(188): 0x40000188 		addi 	D	 Imm 1 	Rn X8 	Rd X8
+0x0C0(192): 0x80ffffb4 		b    	B	 branch to 0x00000074
+0x0C4(196): 0x20050011 		add  	R	 Rm 5 	SHAMT 0 	Rn X1 	Rd X1
+0x0C8(200): 0x20050022 		add  	R	 Rm 5 	SHAMT 0 	Rn X2 	Rd X2
+0x0CC(204): 0x20050033 		add  	R	 Rm 5 	SHAMT 0 	Rn X3 	Rd X3
+0x0D0(208): 0x20050044 		add  	R	 Rm 5 	SHAMT 0 	Rn X4 	Rd X4
+0x0D4(212): 0x50000001 		stur 	D	 Imm 0 	Rn X0 	Rd X1
+0x0D8(216): 0x50000402 		stur 	D	 Imm 4 	Rn X0 	Rd X2
+0x0DC(220): 0x50000803 		stur 	D	 Imm 8 	Rn X0 	Rd X3
+0x0E0(224): 0x50000c04 		stur 	D	 Imm 12 	Rn X0 	Rd X4
+0x0E4(228): 0x40000166 		addi 	D	 Imm 1 	Rn X6 	Rd X6
+0x0E8(232): 0x80ffff80 		b    	B	 branch to 0x00000068
+0x0EC(236): 0x00000000 		hlt  	H	 0
+0x0F0(240): 0x00000000 		hlt  	H	 0
+0x0F4(244): 0x00000000 		hlt  	H	 0
+0x0F8(248): 0x00000000 		hlt  	H	 0
+0x0FC(252): 0x00000000 		hlt  	H	 0
+0x100(256): 0x00000000 		hlt  	H	 0
+0x104(260): 0x00000000 		hlt  	H	 0
+0x108(264): 0x00000000 		hlt  	H	 0
+0x10C(268): 0x00000000 		hlt  	H	 0
+0x110(272): 0x00000000 		hlt  	H	 0
+0x114(276): 0x00000000 		hlt  	H	 0
+0x118(280): 0xffffffff 		None     	NOP	 4294967295
+0x11C(284): 0xffffffff 		None     	NOP	 4294967295
+0x120(288): 0xffffffff 		None     	NOP	 4294967295
+0x124(292): 0xffffffff 		None     	NOP	 4294967295
+0x128(296): 0x00000000 		hlt  	H	 0
+0x12C(300): 0x00000000 		hlt  	H	 0
+0x130(304): 0xffffffff 		None     	NOP	 4294967295
+0x134(308): 0xffffffff 		None     	NOP	 4294967295
+0x138(312): 0xffffffff 		None     	NOP	 4294967295
+0x13C(316): 0xffffffff 		None     	NOP	 4294967295
+0x140(320): 0x00000000 		hlt  	H	 0
+0x144(324): 0x00000000 		hlt  	H	 0
+0x148(328): 0x00000000 		hlt  	H	 0
+0x14C(332): 0x00000000 		hlt  	H	 0
+0x150(336): 0x00000000 		hlt  	H	 0
+0x154(340): 0x00000000 		hlt  	H	 0
+0x158(344): 0x00000000 		hlt  	H	 0
+0x15C(348): 0x00000000 		hlt  	H	 0
+0x160(352): 0x00000000 		hlt  	H	 0
+0x164(356): 0x00000000 		hlt  	H	 0
+0x168(360): 0x00000000 		hlt  	H	 0
+0x16C(364): 0x00000000 		hlt  	H	 0
+0x170(368): 0x00000000 		hlt  	H	 0
+0x174(372): 0x00000000 		hlt  	H	 0
+0x178(376): 0x00000000 		hlt  	H	 0
+0x17C(380): 0x00000000 		hlt  	H	 0
+0x180(384): 0x00000000 		hlt  	H	 0
+0x184(388): 0x00000000 		hlt  	H	 0
+0x188(392): 0x00000000 		hlt  	H	 0
+0x18C(396): 0x00000000 		hlt  	H	 0
+0x190(400): 0x00000000 		hlt  	H	 0
+0x194(404): 0x00000000 		hlt  	H	 0
+0x198(408): 0x00000000 		hlt  	H	 0
+0x19C(412): 0x00000000 		hlt  	H	 0
+0x1A0(416): 0x00000000 		hlt  	H	 0
+0x1A4(420): 0x00000000 		hlt  	H	 0
+0x1A8(424): 0x00000000 		hlt  	H	 0
+0x1AC(428): 0x80000000 		b    	B	 branch to 0x000001AC
+0x1B0(432): 0x80808080 		b    	B	 branch to 0x-07F7DD0
+0x1B4(436): 0xf7e040c0 		None     	NOP	 4158668992
+0x1B8(440): 0xc0c0c0c0 		ppu  	ME	 3233857728
+0x1BC(444): 0xffffe0e0 		None     	NOP	 4294959328
+0x1C0(448): 0x03030103 		None     	H	 3
+0x1C4(452): 0x00010303 		hlt  	H	 3
+0x1C8(456): 0x07070307 		None     	H	 7
+0x1CC(460): 0x07030707 		None     	H	 7
+0x1D0(464): 0x00000000 		hlt  	H	 0
+0x1D4(468): 0x00000000 		hlt  	H	 0
+0x1D8(472): 0x00000000 		hlt  	H	 0
+0x1DC(476): 0x00000000 		hlt  	H	 0
+0x1E0(480): 0x00000000 		hlt  	H	 0
+0x1E4(484): 0x00000000 		hlt  	H	 0
+0x1E8(488): 0x00000000 		hlt  	H	 0
+0x1EC(492): 0x00000000 		hlt  	H	 0
+0x1F0(496): 0x00000000 		hlt  	H	 0
+0x1F4(500): 0x00000000 		hlt  	H	 0
+0x1F8(504): 0x00000000 		hlt  	H	 0
+0x1FC(508): 0x00000000 		hlt  	H	 0
+0x200(512): 0x00000000 		hlt  	H	 0
+0x204(516): 0x00000000 		hlt  	H	 0
+0x208(520): 0x00000000 		hlt  	H	 0
+0x20C(524): 0x00000000 		hlt  	H	 0
+0x210(528): 0x00000000 		hlt  	H	 0
+0x214(532): 0x00000000 		hlt  	H	 0
+0x218(536): 0x00000000 		hlt  	H	 0
+0x21C(540): 0x00000000 		hlt  	H	 0
+0x220(544): 0x00000000 		hlt  	H	 0
+0x224(548): 0x00000000 		hlt  	H	 0
+0x228(552): 0x00000000 		hlt  	H	 0
+0x22C(556): 0x00000000 		hlt  	H	 0
+0x230(560): 0x00000000 		hlt  	H	 0
+0x234(564): 0x00000000 		hlt  	H	 0
+0x238(568): 0x00000000 		hlt  	H	 0
+0x23C(572): 0x00000000 		hlt  	H	 0
+0x240(576): 0x00000000 		hlt  	H	 0
+0x244(580): 0x00000000 		hlt  	H	 0
+0x248(584): 0x00000000 		hlt  	H	 0
+0x24C(588): 0x00000000 		hlt  	H	 0
+0x250(592): 0x00000000 		hlt  	H	 0
+0x254(596): 0x00000000 		hlt  	H	 0
+0x258(600): 0x00000000 		hlt  	H	 0
+0x25C(604): 0x00000000 		hlt  	H	 0
+0x260(608): 0x00000000 		hlt  	H	 0
+0x264(612): 0x00000000 		hlt  	H	 0
+0x268(616): 0x00000000 		hlt  	H	 0
+0x26C(620): 0x00000000 		hlt  	H	 0
+0x270(624): 0x00000000 		hlt  	H	 0
+0x274(628): 0x00000000 		hlt  	H	 0
+0x278(632): 0x00000000 		hlt  	H	 0
+0x27C(636): 0x00000000 		hlt  	H	 0
+0x280(640): 0x00000000 		hlt  	H	 0
+0x284(644): 0x00000000 		hlt  	H	 0
+0x288(648): 0x00000000 		hlt  	H	 0
+0x28C(652): 0x00000000 		hlt  	H	 0
+0x290(656): 0x00000000 		hlt  	H	 0
+0x294(660): 0x00000000 		hlt  	H	 0
+0x298(664): 0x00000000 		hlt  	H	 0
+0x29C(668): 0x00000000 		hlt  	H	 0
+0x2A0(672): 0x00000080 		hlt  	H	 128
+0x2A4(676): 0x00000000 		hlt  	H	 0
+0x2A8(680): 0xf0e0e0c0 		None     	NOP	 4041269440
+0x2AC(684): 0xf8f8f0f0 		None     	NOP	 4177064176
+0x2B0(688): 0x00307879 		hlt  	H	 121
+0x2B4(692): 0x80002000 		b    	B	 branch to 0x000022B4
+0x2B8(696): 0xffffffff 		None     	NOP	 4294967295
+0x2BC(700): 0x7fffdfff 		None     	None	 2147475455
+0x2C0(704): 0x180c0f03 		None     	H	 3
+0x2C4(708): 0x42c02000 		andi 	D	 Imm 49184 	Rn X0 	Rd X0
+0x2C8(712): 0x3f1f1f0f 		None     	R	 Rm 31 	SHAMT 31 	Rn X0 	Rd XZR
+0x2CC(716): 0xbd3f7f3f 		None     	IM	 Imm 3F7F 	SH 3 	Rt XZR
+0x2D0(720): 0x00000000 		hlt  	H	 0
+0x2D4(724): 0x00000000 		hlt  	H	 0
+0x2D8(728): 0x00000000 		hlt  	H	 0
+0x2DC(732): 0x00000000 		hlt  	H	 0
+0x2E0(736): 0x00000000 		hlt  	H	 0
+0x2E4(740): 0x00000000 		hlt  	H	 0
+0x2E8(744): 0x00000000 		hlt  	H	 0
+0x2EC(748): 0x00000000 		hlt  	H	 0
+0x2F0(752): 0x00000000 		hlt  	H	 0
+0x2F4(756): 0x00000000 		hlt  	H	 0
+0x2F8(760): 0x00000000 		hlt  	H	 0
+0x2FC(764): 0x00000000 		hlt  	H	 0
+0x300(768): 0x00000000 		hlt  	H	 0
+0x304(772): 0x00000000 		hlt  	H	 0
+0x308(776): 0x00000000 		hlt  	H	 0
+0x30C(780): 0x00000000 		hlt  	H	 0
+0x310(784): 0x0000c000 		hlt  	H	 0
+0x314(788): 0x00808080 		hlt  	H	 128
+0x318(792): 0xfcfefff0 		None     	NOP	 4244570096
+0x31C(796): 0xfc7c7c7c 		None     	NOP	 4236016764
+0x320(800): 0x51060500 		sturb	D	 Imm 1541 	Rn X0 	Rd X0
+0x324(804): 0x1f1f6f2f 		None     	H	 47
+0x328(808): 0xfe7f7f7f 		None     	NOP	 4269768575
+0x32C(812): 0x2060f0f0 		add  	R	 Rm 96 	SHAMT 240 	Rn XZR 	Rd X0
+0x330(816): 0x00000000 		hlt  	H	 0
+0x334(820): 0x00000000 		hlt  	H	 0
+0x338(824): 0x00000000 		hlt  	H	 0
+0x33C(828): 0x00000000 		hlt  	H	 0
+0x340(832): 0x00000000 		hlt  	H	 0
+0x344(836): 0x00000000 		hlt  	H	 0
+0x348(840): 0x00000000 		hlt  	H	 0
+0x34C(844): 0x00000000 		hlt  	H	 0
+0x350(848): 0xc0000000 		ppu  	ME	 3221225472
+0x354(852): 0xe0e06080 		nop  	NOP	 3772801152
+0x358(856): 0xfeffe0ff 		None     	NOP	 4278182143
+0x35C(860): 0x1e1e9cfc 		None     	H	 252
+0x360(864): 0x04001c00 		None     	H	 0
+0x364(868): 0x1f09060b 		None     	H	 11
+0x368(872): 0x1f1f3f3f 		None     	H	 63
+0x36C(876): 0x20161f1f 		add  	R	 Rm 22 	SHAMT 31 	Rn X1 	Rd XZR
+0x370(880): 0x00000000 		hlt  	H	 0
+0x374(884): 0x00000000 		hlt  	H	 0
+0x378(888): 0x00000000 		hlt  	H	 0
+0x37C(892): 0x00000000 		hlt  	H	 0
+0x380(896): 0x00000000 		hlt  	H	 0
+0x384(900): 0x00000000 		hlt  	H	 0
+0x388(904): 0x00000000 		hlt  	H	 0
+0x38C(908): 0x00000000 		hlt  	H	 0
+0x390(912): 0x00000000 		hlt  	H	 0
+0x394(916): 0x00000000 		hlt  	H	 0
+0x398(920): 0x00000000 		hlt  	H	 0
+0x39C(924): 0x00000000 		hlt  	H	 0
+0x3A0(928): 0x38181800 		None     	R	 Rm 24 	SHAMT 24 	Rn X0 	Rd X0
+0x3A4(932): 0x60603030 		None     	None	 1616916528
+0x3A8(936): 0x7c3cbcfc 		None     	None	 2084355324
+0x3AC(940): 0xf0f07878 		None     	NOP	 4042291320
+0x3B0(944): 0xf2f4c050 		None     	NOP	 4076126288
+0x3B4(948): 0x2068febe 		add  	R	 Rm 104 	SHAMT 254 	Rn X11 	Rd XPC
+0x3B8(952): 0x0c0b3fbf 		None     	H	 191
+0x3BC(956): 0x00800001 		hlt  	H	 1
+0x3C0(960): 0x0647ade6 		None     	H	 230
+0x3C4(964): 0x00010503 		hlt  	H	 3
+0x3C8(968): 0x09005219 		None     	H	 25
+0x3CC(972): 0x00000000 		hlt  	H	 0
+0x3D0(976): 0x00000000 		hlt  	H	 0
+0x3D4(980): 0x0c040000 		None     	H	 0
+0x3D8(984): 0x00000000 		hlt  	H	 0
+0x3DC(988): 0x1e0e0400 		None     	H	 0
+0x3E0(992): 0x00000000 		hlt  	H	 0
+0x3E4(996): 0x00000000 		hlt  	H	 0
+0x3E8(1000): 0x00000000 		hlt  	H	 0
+0x3EC(1004): 0x00000000 		hlt  	H	 0
+0x3F0(1008): 0x00000000 		hlt  	H	 0
+0x3F4(1012): 0x00302000 		hlt  	H	 0
+0x3F8(1016): 0x00000000 		hlt  	H	 0
+0x3FC(1020): 0x78787020 		None     	None	 2021158944
+0x400(1024): 0x80408000 		b    	B	 branch to 0x00408400
+0x404(1028): 0xc020c000 		ppu  	ME	 3223371776
+0x408(1032): 0x40a04080 		addi 	D	 Imm 41024 	Rn X8 	Rd X0
+0x40C(1036): 0x20c00080 		add  	R	 Rm 192 	SHAMT 0 	Rn X8 	Rd X0
+0x410(1040): 0x61100f00 		None     	None	 1628442368
+0x414(1044): 0x10084542 		None     	H	 66
+0x418(1048): 0x9eeff0ff 		None     	B	 branch to 0x-0100AE9
+0x41C(1052): 0xeff7babd 		None     	NOP	 4025989821
+0x420(1056): 0x1e1e1e1f 		None     	H	 31
+0x424(1060): 0x1c1c1c1c 		None     	H	 28
+0x428(1064): 0x21212120 		sub  	R	 Rm 33 	SHAMT 33 	Rn X2 	Rd X0
+0x42C(1068): 0x3f3b2323 		None     	R	 Rm 59 	SHAMT 35 	Rn X2 	Rd X3
+0x430(1072): 0x00000000 		hlt  	H	 0
+0x434(1076): 0x00000000 		hlt  	H	 0
+0x438(1080): 0x00000000 		hlt  	H	 0
+0x43C(1084): 0x00000000 		hlt  	H	 0
+0x440(1088): 0xf0000000 		None     	NOP	 4026531840
+0x444(1092): 0x00c03008 		hlt  	H	 8
+0x448(1096): 0x08f00000 		None     	H	 0
+0x44C(1100): 0xc030c8f4 		ppu  	ME	 3224422644
+0x450(1104): 0xc1c0c0e0 		flu  	ME	 3250634976
+0x454(1108): 0x11101886 		None     	H	 134
+0x458(1112): 0x3e3f3e1e 		None     	R	 Rm 63 	SHAMT 62 	Rn X1 	Rd XPC
+0x45C(1116): 0xeeefe779 		None     	NOP	 4008699769
+0x460(1120): 0x1f1f1f1f 		None     	H	 31
+0x464(1124): 0x1f1f1f1f 		None     	H	 31
+0x468(1128): 0x20202020 		add  	R	 Rm 32 	SHAMT 32 	Rn X2 	Rd X0
+0x46C(1132): 0x3e202020 		None     	R	 Rm 32 	SHAMT 32 	Rn X2 	Rd X0
+0x470(1136): 0x00000000 		hlt  	H	 0
+0x474(1140): 0x00000000 		hlt  	H	 0
+0x478(1144): 0x00000000 		hlt  	H	 0
+0x47C(1148): 0x00000000 		hlt  	H	 0
+0x480(1152): 0x00000000 		hlt  	H	 0
+0x484(1156): 0x00000000 		hlt  	H	 0
+0x488(1160): 0x00000000 		hlt  	H	 0
+0x48C(1164): 0x00000000 		hlt  	H	 0
+0x490(1168): 0x00000000 		hlt  	H	 0
+0x494(1172): 0x00000000 		hlt  	H	 0
+0x498(1176): 0x00000000 		hlt  	H	 0
+0x49C(1180): 0x00000000 		hlt  	H	 0
+0x4A0(1184): 0xf8fef0e0 		None     	NOP	 4177457376
+0x4A4(1188): 0x00a0f0d8 		hlt  	H	 216
+0x4A8(1192): 0x8ef1fef0 		None     	B	 branch to 0x-00DFC68
+0x4AC(1196): 0xe0f09828 		nop  	NOP	 3773863976
+0x4B0(1200): 0x03010000 		None     	H	 0
+0x4B4(1204): 0x00010303 		hlt  	H	 3
+0x4B8(1208): 0x07030101 		None     	H	 1
+0x4BC(1212): 0x01030707 		None     	H	 7
+0x4C0(1216): 0x00000000 		hlt  	H	 0
+0x4C4(1220): 0x00000000 		hlt  	H	 0
+0x4C8(1224): 0x00000000 		hlt  	H	 0
+0x4CC(1228): 0x00000000 		hlt  	H	 0
+0x4D0(1232): 0xe8341400 		None     	NOP	 3895727104
+0x4D4(1236): 0x0000f0d8 		hlt  	H	 216
+0x4D8(1240): 0xfcfe3e1e 		None     	NOP	 4244520478
+0x4DC(1244): 0x00f0f8fc 		hlt  	H	 252
+0x4E0(1248): 0x3f180000 		None     	R	 Rm 24 	SHAMT 0 	Rn X0 	Rd X0
+0x4E4(1252): 0x7830393f 		None     	None	 2016426303
+0x4E8(1256): 0x7f3f1800 		None     	None	 2134841344
+0x4EC(1260): 0xfef97f7f 		None     	NOP	 4277763967
+0x4F0(1264): 0x0c143c38 		None     	H	 56
+0x4F4(1268): 0x7330381c 		None     	None	 1932539932
+0x4F8(1272): 0x3e3e7e7c 		None     	R	 Rm 62 	SHAMT 126 	Rn X7 	Rd X12
+0x4FC(1276): 0xff7f7c3e 		None     	NOP	 4286544958
+0x500(1280): 0x00000000 		hlt  	H	 0
+0x504(1284): 0x00000000 		hlt  	H	 0
+0x508(1288): 0x00000000 		hlt  	H	 0
+0x50C(1292): 0x00000000 		hlt  	H	 0
+0x510(1296): 0x000004e3 		hlt  	H	 227
+0x514(1300): 0x00000000 		hlt  	H	 0
+0x518(1304): 0xf0f0f81c 		None     	NOP	 4042323996
+0x51C(1308): 0xc0c0e0e0 		ppu  	ME	 3233865952
+0x520(1312): 0x00380c0c 		hlt  	H	 12
+0x524(1316): 0x305878b0 		None     	R	 Rm 88 	SHAMT 120 	Rn X11 	Rd X0
+0x528(1320): 0xff473317 		None     	NOP	 4282856215
+0x52C(1324): 0xcfa787cf 		None     	ME	 3483862991
+0x530(1328): 0x00000000 		hlt  	H	 0
+0x534(1332): 0x00010705 		hlt  	H	 5
+0x538(1336): 0x05000000 		None     	H	 0
+0x53C(1340): 0x01070f0f 		None     	H	 15
+0x540(1344): 0x00000000 		hlt  	H	 0
+0x544(1348): 0x00000000 		hlt  	H	 0
+0x548(1352): 0x00000000 		hlt  	H	 0
+0x54C(1356): 0x00000000 		hlt  	H	 0
+0x550(1360): 0x00380402 		hlt  	H	 2
+0x554(1364): 0x00000000 		hlt  	H	 0
+0x558(1368): 0xf8c4fafd 		None     	NOP	 4173658877
+0x55C(1372): 0xc0e0e0f0 		ppu  	ME	 3235963120
+0x560(1376): 0x3e0e0f1f 		None     	R	 Rm 14 	SHAMT 15 	Rn X1 	Rd XZR
+0x564(1380): 0x78b0407c 		None     	None	 2024816764
+0x568(1384): 0x4131113f 		subi 	D	 Imm 12561 	Rn X3 	Rd XZR
+0x56C(1388): 0x87cfbf83 		bge  	B	 branch to 0x-0303B11
+0x570(1392): 0x00000000 		hlt  	H	 0
+0x574(1396): 0x01070400 		None     	H	 0
+0x578(1400): 0x00000000 		hlt  	H	 0
+0x57C(1404): 0x070f0f04 		None     	H	 4
+0x580(1408): 0x00000000 		hlt  	H	 0
+0x584(1412): 0x00000000 		hlt  	H	 0
+0x588(1416): 0x00000000 		hlt  	H	 0
+0x58C(1420): 0x101010f0 		None     	H	 240
+0x590(1424): 0x00000000 		hlt  	H	 0
+0x594(1428): 0x00000000 		hlt  	H	 0
+0x598(1432): 0x00000000 		hlt  	H	 0
+0x59C(1436): 0x000000ff 		hlt  	H	 255
+0x5A0(1440): 0x00000000 		hlt  	H	 0
+0x5A4(1444): 0x00000000 		hlt  	H	 0
+0x5A8(1448): 0x00000000 		hlt  	H	 0
+0x5AC(1452): 0x0808080f 		None     	H	 15
+0x5B0(1456): 0xc030d800 		ppu  	ME	 3224426496
+0x5B4(1460): 0x8080c0c0 		b    	B	 branch to 0x-07F398C
+0x5B8(1464): 0xf0f8fcfc 		None     	NOP	 4042849532
+0x5BC(1468): 0xc0c0e0e0 		ppu  	ME	 3233865952
+0x5C0(1472): 0x03030000 		None     	H	 0
+0x5C4(1476): 0x03030303 		None     	H	 3
+0x5C8(1480): 0x07070301 		None     	H	 1
+0x5CC(1484): 0x07070707 		None     	H	 7
+0x5D0(1488): 0x00000000 		hlt  	H	 0
+0x5D4(1492): 0x00000000 		hlt  	H	 0
+0x5D8(1496): 0xf0f0e0e0 		None     	NOP	 4042318048
+0x5DC(1500): 0xfcf8f8f0 		None     	NOP	 4244175088
+0x5E0(1504): 0x00003078 		hlt  	H	 120
+0x5E4(1508): 0xa0c08020 		movk 	IM	 Imm C080 	SH 2 	Rt X0
+0x5E8(1512): 0xffffffff 		None     	NOP	 4294967295
+0x5EC(1516): 0x5f3f7fdf 		None     	D	 Imm 16255 	Rn XSP 	Rd XZR
+0x5F0(1520): 0x0058ccef 		hlt  	H	 239
+0x5F4(1524): 0xe3636020 		None     	NOP	 3814940704
+0x5F8(1528): 0xffffffff 		None     	NOP	 4294967295
+0x5FC(1532): 0x1c9cff7f 		None     	H	 127
+0x600(1536): 0x00000000 		hlt  	H	 0
+0x604(1540): 0x00000000 		hlt  	H	 0
+0x608(1544): 0x00000000 		hlt  	H	 0
+0x60C(1548): 0x00000000 		hlt  	H	 0
+0x610(1552): 0x00000000 		hlt  	H	 0
+0x614(1556): 0x00000000 		hlt  	H	 0
+0x618(1560): 0x00000080 		hlt  	H	 128
+0x61C(1564): 0x00000000 		hlt  	H	 0
+0x620(1568): 0x00000000 		hlt  	H	 0
+0x624(1572): 0x00000000 		hlt  	H	 0
+0x628(1576): 0x00003e7f 		hlt  	H	 127
+0x62C(1580): 0x00000000 		hlt  	H	 0
+0x630(1584): 0x00000000 		hlt  	H	 0
+0x634(1588): 0x00000000 		hlt  	H	 0
+0x638(1592): 0x00000000 		hlt  	H	 0
+0x63C(1596): 0x00000000 		hlt  	H	 0
+0x640(1600): 0x00000000 		hlt  	H	 0
+0x644(1604): 0x00000000 		hlt  	H	 0
+0x648(1608): 0x00000000 		hlt  	H	 0
+0x64C(1612): 0x00000000 		hlt  	H	 0
+0x650(1616): 0x00000000 		hlt  	H	 0
+0x654(1620): 0x00000000 		hlt  	H	 0
+0x658(1624): 0x000080c0 		hlt  	H	 192
+0x65C(1628): 0x00000000 		hlt  	H	 0
+0x660(1632): 0x00003058 		hlt  	H	 88
+0x664(1636): 0x00000000 		hlt  	H	 0
+0x668(1640): 0x003e4fa7 		hlt  	H	 167
+0x66C(1644): 0x00000000 		hlt  	H	 0
+0x670(1648): 0x00000000 		hlt  	H	 0
+0x674(1652): 0x00000000 		hlt  	H	 0
+0x678(1656): 0x00000000 		hlt  	H	 0
+0x67C(1660): 0x00000000 		hlt  	H	 0
+0x680(1664): 0x00000000 		hlt  	H	 0
+0x684(1668): 0x00000000 		hlt  	H	 0
+0x688(1672): 0x10101010 		None     	H	 16
+0x68C(1676): 0x10101010 		None     	H	 16
+0x690(1680): 0x00000000 		hlt  	H	 0
+0x694(1684): 0x00000000 		hlt  	H	 0
+0x698(1688): 0x00000000 		hlt  	H	 0
+0x69C(1692): 0x00000000 		hlt  	H	 0
+0x6A0(1696): 0x00000000 		hlt  	H	 0
+0x6A4(1700): 0x00000000 		hlt  	H	 0
+0x6A8(1704): 0x08080808 		None     	H	 8
+0x6AC(1708): 0x08080808 		None     	H	 8
+0x6B0(1712): 0x00000000 		hlt  	H	 0
+0x6B4(1716): 0x00000000 		hlt  	H	 0
+0x6B8(1720): 0x00000000 		hlt  	H	 0
+0x6BC(1724): 0x00000000 		hlt  	H	 0
+0x6C0(1728): 0x00000000 		hlt  	H	 0
+0x6C4(1732): 0x00000000 		hlt  	H	 0
+0x6C8(1736): 0x00000000 		hlt  	H	 0
+0x6CC(1740): 0x00000000 		hlt  	H	 0
+0x6D0(1744): 0x30381818 		None     	R	 Rm 56 	SHAMT 24 	Rn X1 	Rd X8
+0x6D4(1748): 0xe0606030 		nop  	NOP	 3764412464
+0x6D8(1752): 0x787c3cbc 		None     	None	 2021407932
+0x6DC(1756): 0xf0f0f078 		None     	NOP	 4042322040
+0x6E0(1760): 0xb8f640e0 		None     	IM	 Imm F640 	SH 2 	Rt X0
+0x6E4(1764): 0x000000f0 		hlt  	H	 240
+0x6E8(1768): 0x0408bf1f 		None     	H	 31
+0x6EC(1772): 0x01000000 		None     	H	 0
+0x6F0(1776): 0x010603a1 		None     	H	 161
+0x6F4(1780): 0x00000000 		hlt  	H	 0
+0x6F8(1784): 0x00090456 		hlt  	H	 86
+0x6FC(1788): 0x00000000 		hlt  	H	 0
+0x700(1792): 0x00000000 		hlt  	H	 0
+0x704(1796): 0x00000000 		hlt  	H	 0
+0x708(1800): 0x00000000 		hlt  	H	 0
+0x70C(1804): 0x00000000 		hlt  	H	 0
+0x710(1808): 0x00000000 		hlt  	H	 0
+0x714(1812): 0x00000000 		hlt  	H	 0
+0x718(1816): 0x00000000 		hlt  	H	 0
+0x71C(1820): 0x00000000 		hlt  	H	 0
+0x720(1824): 0x00000000 		hlt  	H	 0
+0x724(1828): 0x00000000 		hlt  	H	 0
+0x728(1832): 0x00000000 		hlt  	H	 0
+0x72C(1836): 0x00000000 		hlt  	H	 0
+0x730(1840): 0x00000000 		hlt  	H	 0
+0x734(1844): 0x00000000 		hlt  	H	 0
+0x738(1848): 0x00000000 		hlt  	H	 0
+0x73C(1852): 0x00000000 		hlt  	H	 0
+0x740(1856): 0x00000000 		hlt  	H	 0
+0x744(1860): 0x00000000 		hlt  	H	 0
+0x748(1864): 0x00000000 		hlt  	H	 0
+0x74C(1868): 0x00000000 		hlt  	H	 0
+0x750(1872): 0xfefefe00 		None     	NOP	 4278124032
+0x754(1876): 0x7e9ebefe 		None     	None	 2124332798
+0x758(1880): 0xfefefe00 		None     	NOP	 4278124032
+0x75C(1884): 0xfefefefe 		None     	NOP	 4278124286
+0x760(1888): 0xfefefe00 		None     	NOP	 4278124032
+0x764(1892): 0x7e9ebefe 		None     	None	 2124332798
+0x768(1896): 0x00000000 		hlt  	H	 0
+0x76C(1900): 0x80604000 		b    	B	 branch to 0x0060476C
+0x770(1904): 0x8282fe00 		None     	B	 branch to 0x-07CFA90
+0x774(1908): 0x7e828282 		None     	None	 2122482306
+0x778(1912): 0xfefefe00 		None     	NOP	 4278124032
+0x77C(1916): 0xfefefefe 		None     	NOP	 4278124286
+0x780(1920): 0x00000000 		hlt  	H	 0
+0x784(1924): 0x00000000 		hlt  	H	 0
+0x788(1928): 0xf0101010 		None     	NOP	 4027584528
+0x78C(1932): 0x00000000 		hlt  	H	 0
+0x790(1936): 0x00000000 		hlt  	H	 0
+0x794(1940): 0x00000000 		hlt  	H	 0
+0x798(1944): 0xff000000 		None     	NOP	 4278190080
+0x79C(1948): 0x00000000 		hlt  	H	 0
+0x7A0(1952): 0x00000000 		hlt  	H	 0
+0x7A4(1956): 0x00000000 		hlt  	H	 0
+0x7A8(1960): 0x0f080808 		None     	H	 8
+0x7AC(1964): 0x00000000 		hlt  	H	 0
+0x7B0(1968): 0x00000000 		hlt  	H	 0
+0x7B4(1972): 0x00000000 		hlt  	H	 0
+0x7B8(1976): 0x00000000 		hlt  	H	 0
+0x7BC(1980): 0x00000000 		hlt  	H	 0
+0x7C0(1984): 0x00000000 		hlt  	H	 0
+0x7C4(1988): 0x00000000 		hlt  	H	 0
+0x7C8(1992): 0x00000000 		hlt  	H	 0
+0x7CC(1996): 0x00000000 		hlt  	H	 0
+0x7D0(2000): 0xd8f8fef0 		None     	ME	 3640196848
+0x7D4(2004): 0x0000a0f0 		hlt  	H	 240
+0x7D8(2008): 0x288ef1fe 		lsl  	R	 Rm 142 	SHAMT 241 	Rn XZR 	Rd XPC
+0x7DC(2012): 0x00e0f098 		hlt  	H	 152
+0x7E0(2016): 0x03030100 		None     	H	 0
+0x7E4(2020): 0x00000103 		hlt  	H	 3
+0x7E8(2024): 0x07070301 		None     	H	 1
+0x7EC(2028): 0x00010307 		hlt  	H	 7
+0x7F0(2032): 0x00000000 		hlt  	H	 0
+0x7F4(2036): 0x00000000 		hlt  	H	 0
+0x7F8(2040): 0x00000000 		hlt  	H	 0
+0x7FC(2044): 0x00000000 		hlt  	H	 0
+0x800(2048): 0x00000000 		hlt  	H	 0
+0x804(2052): 0x60a0c000 		None     	None	 1621147648
+0x808(2056): 0xf6fafc00 		None     	NOP	 4143643648
+0x80C(2060): 0x0e0e0e0e 		None     	H	 14
+0x810(2064): 0x00000000 		hlt  	H	 0
+0x814(2068): 0x0c0b0700 		None     	H	 0
+0x818(2072): 0xdfbf7f00 		None     	ME	 3753869056
+0x81C(2076): 0xe0e0e0e0 		nop  	NOP	 3772834016
+0x820(2080): 0x00000000 		hlt  	H	 0
+0x824(2084): 0x00000000 		hlt  	H	 0
+0x828(2088): 0x00000000 		hlt  	H	 0
+0x82C(2092): 0x00000000 		hlt  	H	 0
+0x830(2096): 0x00000000 		hlt  	H	 0
+0x834(2100): 0x00000000 		hlt  	H	 0
+0x838(2104): 0x00000000 		hlt  	H	 0
+0x83C(2108): 0x00000000 		hlt  	H	 0
+0x840(2112): 0xe0c08000 		nop  	NOP	 3770712064
+0x844(2116): 0xfcfcf8f0 		None     	NOP	 4244437232
+0x848(2120): 0x00000000 		hlt  	H	 0
+0x84C(2124): 0x00000000 		hlt  	H	 0
+0x850(2128): 0x07030100 		None     	H	 0
+0x854(2132): 0x3f3f1f0f 		None     	R	 Rm 63 	SHAMT 31 	Rn X0 	Rd XZR
+0x858(2136): 0x00000000 		hlt  	H	 0
+0x85C(2140): 0x00000000 		hlt  	H	 0
+0x860(2144): 0xeef6f6fe 		None     	NOP	 4009162494
+0x864(2148): 0x0000387c 		hlt  	H	 124
+0x868(2152): 0x10080800 		None     	H	 0
+0x86C(2156): 0x00000000 		hlt  	H	 0
+0x870(2160): 0x7f7f7f7f 		None     	None	 2139062143
+0x874(2164): 0x00001c3e 		hlt  	H	 62
+0x878(2168): 0x00000000 		hlt  	H	 0
+0x87C(2172): 0x00000000 		hlt  	H	 0
+0x880(2176): 0x7e7e7e00 		None     	None	 2122219008
+0x884(2180): 0x7e7e7e7e 		None     	None	 2122219134
+0x888(2184): 0x80808000 		b    	B	 branch to 0x-07F7778
+0x88C(2188): 0x80808080 		b    	B	 branch to 0x-07F76F4
+0x890(2192): 0x00000000 		hlt  	H	 0
+0x894(2196): 0x00000000 		hlt  	H	 0
+0x898(2200): 0x00000000 		hlt  	H	 0
+0x89C(2204): 0x00000000 		hlt  	H	 0
+0x8A0(2208): 0xfefefe7e 		None     	NOP	 4278124158
+0x8A4(2212): 0xfefefefe 		None     	NOP	 4278124286
+0x8A8(2216): 0x00000080 		hlt  	H	 128
+0x8AC(2220): 0x00000000 		hlt  	H	 0
+0x8B0(2224): 0xffffff00 		None     	NOP	 4294967040
+0x8B4(2228): 0xffffffff 		None     	NOP	 4294967295
+0x8B8(2232): 0x00000000 		hlt  	H	 0
+0x8BC(2236): 0x00000000 		hlt  	H	 0
+0x8C0(2240): 0xfefefe00 		None     	NOP	 4278124032
+0x8C4(2244): 0x7efefefe 		None     	None	 2130640638
+0x8C8(2248): 0x00000000 		hlt  	H	 0
+0x8CC(2252): 0x80000000 		b    	B	 branch to 0x000008CC
+0x8D0(2256): 0x7f7f7f00 		None     	None	 2139062016
+0x8D4(2260): 0x7e7f7f7f 		None     	None	 2122284927
+0x8D8(2264): 0x80808000 		b    	B	 branch to 0x-07F7728
+0x8DC(2268): 0x81808080 		beq  	B	 branch to 0x-07F76A4
+0x8E0(2272): 0xfefefe00 		None     	NOP	 4278124032
+0x8E4(2276): 0xfefefefe 		None     	NOP	 4278124286
+0x8E8(2280): 0x00000000 		hlt  	H	 0
+0x8EC(2284): 0x00000000 		hlt  	H	 0
+0x8F0(2288): 0x7f7f7f00 		None     	None	 2139062016
+0x8F4(2292): 0x7f7f7f7f 		None     	None	 2139062143
+0x8F8(2296): 0x80808000 		b    	B	 branch to 0x-07F7708
+0x8FC(2300): 0x80808080 		b    	B	 branch to 0x-07F7684
+0x900(2304): 0x00c0a060 		hlt  	H	 96
+0x904(2308): 0x00000000 		hlt  	H	 0
+0x908(2312): 0x0e0e0e0e 		None     	H	 14
+0x90C(2316): 0x00fcfaf6 		hlt  	H	 246
+0x910(2320): 0x00070b0c 		hlt  	H	 12
+0x914(2324): 0x00000000 		hlt  	H	 0
+0x918(2328): 0xe0e0e0e0 		nop  	NOP	 3772834016
+0x91C(2332): 0x007fbfdf 		hlt  	H	 223
+0x920(2336): 0xfefefe00 		None     	NOP	 4278124032
+0x924(2340): 0x7e9ebefe 		None     	None	 2124332798
+0x928(2344): 0xfefefe00 		None     	NOP	 4278124032
+0x92C(2348): 0xfefefefe 		None     	NOP	 4278124286
+0x930(2352): 0xfefefe00 		None     	NOP	 4278124032
+0x934(2356): 0x7e9ebefe 		None     	None	 2124332798
+0x938(2360): 0x00000000 		hlt  	H	 0
+0x93C(2364): 0x80604000 		b    	B	 branch to 0x0060493C
+0x940(2368): 0x8282fe00 		None     	B	 branch to 0x-07CF8C0
+0x944(2372): 0x7e828282 		None     	None	 2122482306
+0x948(2376): 0xfefefe00 		None     	NOP	 4278124032
+0x94C(2380): 0xfefefefe 		None     	NOP	 4278124286
+0x950(2384): 0xfefefe00 		None     	NOP	 4278124032
+0x954(2388): 0x00fefefe 		hlt  	H	 254
+0x958(2392): 0x00000000 		hlt  	H	 0
+0x95C(2396): 0xfe000000 		None     	NOP	 4261412864
+0x960(2400): 0xffffff00 		None     	NOP	 4294967040
+0x964(2404): 0x00ffffff 		hlt  	H	 255
+0x968(2408): 0x00000000 		hlt  	H	 0
+0x96C(2412): 0xff000000 		None     	NOP	 4278190080
+0x970(2416): 0x7f7f7f00 		None     	None	 2139062016
+0x974(2420): 0x007f7f7f 		hlt  	H	 127
+0x978(2424): 0x80808000 		b    	B	 branch to 0x-07F7688
+0x97C(2428): 0xff808080 		None     	NOP	 4286611584
+0x980(2432): 0x7e7e7e7e 		None     	None	 2122219134
+0x984(2436): 0x7e7e7e7e 		None     	None	 2122219134
+0x988(2440): 0x80808080 		b    	B	 branch to 0x-07F75F8
+0x98C(2444): 0x80808080 		b    	B	 branch to 0x-07F75F4
+0x990(2448): 0x00000000 		hlt  	H	 0
+0x994(2452): 0x00000000 		hlt  	H	 0
+0x998(2456): 0x00000000 		hlt  	H	 0
+0x99C(2460): 0x00000000 		hlt  	H	 0
+0x9A0(2464): 0xfffffffe 		None     	NOP	 4294967294
+0x9A4(2468): 0x00ffffff 		hlt  	H	 255
+0x9A8(2472): 0x00000000 		hlt  	H	 0
+0x9AC(2476): 0xff000000 		None     	NOP	 4278190080
+0x9B0(2480): 0x7f7f7f7e 		None     	None	 2139062142
+0x9B4(2484): 0x7e7f7f7f 		None     	None	 2122284927
+0x9B8(2488): 0x80808080 		b    	B	 branch to 0x-07F75C8
+0x9BC(2492): 0x81808080 		beq  	B	 branch to 0x-07F75C4
+0x9C0(2496): 0xfefefe7e 		None     	NOP	 4278124158
+0x9C4(2500): 0x00fefefe 		hlt  	H	 254
+0x9C8(2504): 0x00000080 		hlt  	H	 128
+0x9CC(2508): 0xfe000000 		None     	NOP	 4261412864
+0x9D0(2512): 0x7f7f7f7e 		None     	None	 2139062142
+0x9D4(2516): 0x007f7f7f 		hlt  	H	 127
+0x9D8(2520): 0x80808080 		b    	B	 branch to 0x-07F75A8
+0x9DC(2524): 0xff808080 		None     	NOP	 4286611584
+0x9E0(2528): 0xfefefefe 		None     	NOP	 4278124286
+0x9E4(2532): 0x00fefefe 		hlt  	H	 254
+0x9E8(2536): 0x00000000 		hlt  	H	 0
+0x9EC(2540): 0xfe000000 		None     	NOP	 4261412864
+0x9F0(2544): 0x7f7f7f7f 		None     	None	 2139062143
+0x9F4(2548): 0x007f7f7f 		hlt  	H	 127
+0x9F8(2552): 0x80808080 		b    	B	 branch to 0x-07F7588
+0x9FC(2556): 0xff808080 		None     	NOP	 4286611584
+0xA00(2560): 0x60653800 		None     	None	 1617246208
+0xA04(2564): 0x183d6160 		None     	H	 96
+0xA08(2568): 0x60653800 		None     	None	 1617246208
+0xA0C(2572): 0x183d6160 		None     	H	 96
+0xA10(2576): 0x63636300 		None     	None	 1667457792
+0xA14(2580): 0xfbfb6363 		None     	NOP	 4227556195
+0xA18(2584): 0x63636300 		None     	None	 1667457792
+0xA1C(2588): 0xfbfb6363 		None     	NOP	 4227556195
+0xA20(2592): 0x06663c00 		None     	H	 0
+0xA24(2596): 0x396d603c 		None     	R	 Rm 109 	SHAMT 96 	Rn X3 	Rd X12
+0xA28(2600): 0x06663c00 		None     	H	 0
+0xA2C(2604): 0x396d603c 		None     	R	 Rm 109 	SHAMT 96 	Rn X3 	Rd X12
+0xA30(2608): 0x63636300 		None     	None	 1667457792
+0xA34(2612): 0xfbfb6363 		None     	NOP	 4227556195
+0xA38(2616): 0x63636300 		None     	None	 1667457792
+0xA3C(2620): 0xfbfb6363 		None     	NOP	 4227556195
+0xA40(2624): 0xfccccc00 		None     	NOP	 4241280000
+0xA44(2628): 0x3179cccc 		None     	R	 Rm 121 	SHAMT 204 	Rn X12 	Rd X12
+0xA48(2632): 0xfccccc00 		None     	NOP	 4241280000
+0xA4C(2636): 0x3179cccc 		None     	R	 Rm 121 	SHAMT 204 	Rn X12 	Rd X12
+0xA50(2640): 0x98981800 		None     	B	 branch to 0x-067DDB0
+0xA54(2644): 0x7e7e1818 		None     	None	 2122192920
+0xA58(2648): 0x98981800 		None     	B	 branch to 0x-067DDA8
+0xA5C(2652): 0x7e7e1818 		None     	None	 2122192920
+0xA60(2656): 0x01190f00 		None     	H	 0
+0xA64(2660): 0x0e1b180f 		None     	H	 15
+0xA68(2664): 0x01190f00 		None     	H	 0
+0xA6C(2668): 0x0e1b180f 		None     	H	 15
+0xA70(2672): 0x00000000 		hlt  	H	 0
+0xA74(2676): 0x00000000 		hlt  	H	 0
+0xA78(2680): 0x00000000 		hlt  	H	 0
+0xA7C(2684): 0x00000000 		hlt  	H	 0
+0xA80(2688): 0x7e7e7e7e 		None     	None	 2122219134
+0xA84(2692): 0x007e7e7e 		hlt  	H	 126
+0xA88(2696): 0x80808080 		b    	B	 branch to 0x-07F74F8
+0xA8C(2700): 0xfe808080 		None     	NOP	 4269834368
+0xA90(2704): 0xbe000000 		None     	IM	 Imm 0000 	SH 0 	Rt X0
+0xA94(2708): 0x9ea2a2a2 		None     	B	 branch to 0x-05D52CA
+0xA98(2712): 0xbe000000 		None     	IM	 Imm 0000 	SH 0 	Rt X0
+0xA9C(2716): 0xbebebebe 		None     	IM	 Imm BEBE 	SH 3 	Rt XPC
+0xAA0(2720): 0xef000000 		None     	NOP	 4009754624
+0xAA4(2724): 0xe7282828 		None     	NOP	 3878168616
+0xAA8(2728): 0xef000000 		None     	NOP	 4009754624
+0xAAC(2732): 0xefefefef 		None     	NOP	 4025479151
+0xAB0(2736): 0xfb000000 		None     	NOP	 4211081216
+0xAB4(2740): 0x798a8a8a 		None     	None	 2039122570
+0xAB8(2744): 0xfb000000 		None     	NOP	 4211081216
+0xABC(2748): 0xfbfbfbfb 		None     	NOP	 4227595259
+0xAC0(2752): 0x515151df 		sturb	D	 Imm 20817 	Rn XSP 	Rd XZR
+0xAC4(2756): 0x51df00df 		sturb	D	 Imm 57088 	Rn XSP 	Rd XZR
+0xAC8(2760): 0xdfdfdfdf 		None     	ME	 3755991007
+0xACC(2764): 0xdfdf00df 		None     	ME	 3755933919
+0xAD0(2768): 0x04040407 		None     	H	 7
+0xAD4(2772): 0x04070007 		None     	H	 7
+0xAD8(2776): 0x07070707 		None     	H	 7
+0xADC(2780): 0x07070007 		None     	H	 7
+0xAE0(2784): 0x00df5151 		hlt  	H	 81
+0xAE4(2788): 0x00000000 		hlt  	H	 0
+0xAE8(2792): 0x00dfdfdf 		hlt  	H	 223
+0xAEC(2796): 0x00000000 		hlt  	H	 0
+0xAF0(2800): 0x00070404 		hlt  	H	 4
+0xAF4(2804): 0x00000000 		hlt  	H	 0
+0xAF8(2808): 0x00070707 		hlt  	H	 7
+0xAFC(2812): 0x00000000 		hlt  	H	 0
+0xB00(2816): 0x1898f000 		None     	H	 0
+0xB04(2820): 0xe0b080f0 		nop  	NOP	 3769663728
+0xB08(2824): 0x1898f000 		None     	H	 0
+0xB0C(2828): 0xe0b080f0 		nop  	NOP	 3769663728
+0xB10(2832): 0x00000000 		hlt  	H	 0
+0xB14(2836): 0xe0000000 		nop  	NOP	 3758096384
+0xB18(2840): 0x00000000 		hlt  	H	 0
+0xB1C(2844): 0x00000000 		hlt  	H	 0
+0xB20(2848): 0x00000000 		hlt  	H	 0
+0xB24(2852): 0xfb000000 		None     	NOP	 4211081216
+0xB28(2856): 0x00000000 		hlt  	H	 0
+0xB2C(2860): 0x00000000 		hlt  	H	 0
+0xB30(2864): 0x2e3e3e00 		None     	R	 Rm 62 	SHAMT 62 	Rn X0 	Rd X0
+0xB34(2868): 0x3e001e26 		None     	R	 Rm 0 	SHAMT 30 	Rn X2 	Rd X6
+0xB38(2872): 0x10000000 		None     	H	 0
+0xB3C(2876): 0x00002018 		hlt  	H	 24
+0xB40(2880): 0xe0e0e000 		nop  	NOP	 3772833792
+0xB44(2884): 0xe000e060 		nop  	NOP	 3758153824
+0xB48(2888): 0xe0e0e000 		nop  	NOP	 3772833792
+0xB4C(2892): 0xe000e0e0 		nop  	NOP	 3758153952
+0xB50(2896): 0x02030300 		None     	H	 0
+0xB54(2900): 0xfb000102 		None     	NOP	 4211081474
+0xB58(2904): 0x03030300 		None     	H	 0
+0xB5C(2908): 0xfb000303 		None     	NOP	 4211081987
+0xB60(2912): 0x00000000 		hlt  	H	 0
+0xB64(2916): 0x3e000000 		None     	R	 Rm 0 	SHAMT 0 	Rn X0 	Rd X0
+0xB68(2920): 0x00000000 		hlt  	H	 0
+0xB6C(2924): 0x3e000000 		None     	R	 Rm 0 	SHAMT 0 	Rn X0 	Rd X0
+0xB70(2928): 0x60e0e0e0 		None     	None	 1625350368
+0xB74(2932): 0x000000e0 		hlt  	H	 224
+0xB78(2936): 0x80000000 		b    	B	 branch to 0x00000B78
+0xB7C(2940): 0x00000000 		hlt  	H	 0
+0xB80(2944): 0x9abafbfb 		None     	B	 branch to 0x-044F885
+0xB84(2948): 0xf8f80079 		None     	NOP	 4177002617
+0xB88(2952): 0x61410000 		None     	None	 1631649792
+0xB8C(2956): 0x00000082 		hlt  	H	 130
+0xB90(2960): 0x00000000 		hlt  	H	 0
+0xB94(2964): 0x3e3e0000 		None     	R	 Rm 62 	SHAMT 0 	Rn X0 	Rd X0
+0xB98(2968): 0x00000000 		hlt  	H	 0
+0xB9C(2972): 0x00000000 		hlt  	H	 0
+0xBA0(2976): 0x00000000 		hlt  	H	 0
+0xBA4(2980): 0xe0e00000 		nop  	NOP	 3772776448
+0xBA8(2984): 0x00000000 		hlt  	H	 0
+0xBAC(2988): 0xe0e00000 		nop  	NOP	 3772776448
+0xBB0(2992): 0x98b8f8f8 		None     	B	 branch to 0x-046FB58
+0xBB4(2996): 0xfbfb0078 		None     	NOP	 4227530872
+0xBB8(3000): 0xf8f8f8f8 		None     	NOP	 4177066232
+0xBBC(3004): 0xfbfb00f8 		None     	NOP	 4227531000
+0xBC0(3008): 0x262e3e3e 		orr  	R	 Rm 46 	SHAMT 62 	Rn X3 	Rd XPC
+0xBC4(3012): 0x0000001e 		hlt  	H	 30
+0xBC8(3016): 0x3e3e3e3e 		None     	R	 Rm 62 	SHAMT 62 	Rn X3 	Rd XPC
+0xBCC(3020): 0x0000003e 		hlt  	H	 62
+0xBD0(3024): 0x00000000 		hlt  	H	 0
+0xBD4(3028): 0x20e00000 		add  	R	 Rm 224 	SHAMT 0 	Rn X0 	Rd X0
+0xBD8(3032): 0x00000000 		hlt  	H	 0
+0xBDC(3036): 0xe0e00000 		nop  	NOP	 3772776448
+0xBE0(3040): 0x888888f8 		blo  	B	 branch to 0x-0776B28
+0xBE4(3044): 0x8afb0078 		bhi  	B	 branch to 0x-004F3A4
+0xBE8(3048): 0xf8f8f8f8 		None     	NOP	 4177066232
+0xBEC(3052): 0xfbfb00f8 		None     	NOP	 4227531000
+0xBF0(3056): 0x00000000 		hlt  	H	 0
+0xBF4(3060): 0x223e0000 		div  	R	 Rm 62 	SHAMT 0 	Rn X0 	Rd X0
+0xBF8(3064): 0x00000000 		hlt  	H	 0
+0xBFC(3068): 0x3e3e0000 		None     	R	 Rm 62 	SHAMT 0 	Rn X0 	Rd X0
+0xC00(3072): 0x00ffff00 		hlt  	H	 0
+0xC04(3076): 0xffff0000 		None     	NOP	 4294901760
+0xC08(3080): 0xffffff00 		None     	NOP	 4294967040
+0xC0C(3084): 0x0000ffff 		hlt  	H	 255
+0xC10(3088): 0xe060e0e0 		nop  	NOP	 3764445408
+0xC14(3092): 0x00000000 		hlt  	H	 0
+0xC18(3096): 0x00800000 		hlt  	H	 0
+0xC1C(3100): 0x00000000 		hlt  	H	 0
+0xC20(3104): 0x799abafb 		None     	None	 2040183547
+0xC24(3108): 0x00000000 		hlt  	H	 0
+0xC28(3112): 0x82614100 		None     	B	 branch to 0x00614D28
+0xC2C(3116): 0x00000000 		hlt  	H	 0
+0xC30(3120): 0x1e262e3e 		None     	H	 62
+0xC34(3124): 0x00000000 		hlt  	H	 0
+0xC38(3128): 0x20181000 		add  	R	 Rm 24 	SHAMT 16 	Rn X0 	Rd X0
+0xC3C(3132): 0x00000000 		hlt  	H	 0
+0xC40(3136): 0xe060e0e0 		nop  	NOP	 3764445408
+0xC44(3140): 0x00000000 		hlt  	H	 0
+0xC48(3144): 0xe0e0e0e0 		nop  	NOP	 3772834016
+0xC4C(3148): 0x00000000 		hlt  	H	 0
+0xC50(3152): 0x799abafb 		None     	None	 2040183547
+0xC54(3156): 0x00000000 		hlt  	H	 0
+0xC58(3160): 0xfbfbfbfb 		None     	NOP	 4227595259
+0xC5C(3164): 0x00000000 		hlt  	H	 0
+0xC60(3168): 0x1e262e3e 		None     	H	 62
+0xC64(3172): 0x00000000 		hlt  	H	 0
+0xC68(3176): 0x3e3e3e3e 		None     	R	 Rm 62 	SHAMT 62 	Rn X3 	Rd XPC
+0xC6C(3180): 0x00000000 		hlt  	H	 0
+0xC70(3184): 0x00000000 		hlt  	H	 0
+0xC74(3188): 0x00000000 		hlt  	H	 0
+0xC78(3192): 0x00000000 		hlt  	H	 0
+0xC7C(3196): 0x00000000 		hlt  	H	 0
+0xC80(3200): 0x007898b8 		hlt  	H	 184
+0xC84(3204): 0x00000000 		hlt  	H	 0
+0xC88(3208): 0x00806040 		hlt  	H	 64
+0xC8C(3212): 0x00000000 		hlt  	H	 0
+0xC90(3216): 0x001e262e 		hlt  	H	 46
+0xC94(3220): 0x00000000 		hlt  	H	 0
+0xC98(3224): 0x00201810 		hlt  	H	 16
+0xC9C(3228): 0x00000000 		hlt  	H	 0
+0xCA0(3232): 0x00e060e0 		hlt  	H	 224
+0xCA4(3236): 0x00000000 		hlt  	H	 0
+0xCA8(3240): 0x00e0e0e0 		hlt  	H	 224
+0xCAC(3244): 0x00000000 		hlt  	H	 0
+0xCB0(3248): 0x00799aba 		hlt  	H	 186
+0xCB4(3252): 0x00000000 		hlt  	H	 0
+0xCB8(3256): 0x00fbfbfb 		hlt  	H	 251
+0xCBC(3260): 0x00000000 		hlt  	H	 0
+0xCC0(3264): 0x00000000 		hlt  	H	 0
+0xCC4(3268): 0x00000000 		hlt  	H	 0
+0xCC8(3272): 0x00000000 		hlt  	H	 0
+0xCCC(3276): 0x00000000 		hlt  	H	 0
+0xCD0(3280): 0x00e02020 		hlt  	H	 32
+0xCD4(3284): 0x00000000 		hlt  	H	 0
+0xCD8(3288): 0x00e0e0e0 		hlt  	H	 224
+0xCDC(3292): 0x00000000 		hlt  	H	 0
+0xCE0(3296): 0x00798a8a 		hlt  	H	 138
+0xCE4(3300): 0x00000000 		hlt  	H	 0
+0xCE8(3304): 0x00fbfbfb 		hlt  	H	 251
+0xCEC(3308): 0x00000000 		hlt  	H	 0
+0xCF0(3312): 0x001e2222 		hlt  	H	 34
+0xCF4(3316): 0x00000000 		hlt  	H	 0
+0xCF8(3320): 0x003e3e3e 		hlt  	H	 62
+0xCFC(3324): 0x00000000 		hlt  	H	 0
+0xD00(3328): 0x0dfdf30f 		None     	H	 15
+0xD04(3332): 0x06060606 		None     	H	 6
+0xD08(3336): 0x00000000 		hlt  	H	 0
+0xD0C(3340): 0x101010f0 		None     	H	 240
+0xD10(3344): 0x00ffff00 		hlt  	H	 0
+0xD14(3348): 0x00000000 		hlt  	H	 0
+0xD18(3352): 0x00000000 		hlt  	H	 0
+0xD1C(3356): 0x000000ff 		hlt  	H	 255
+0xD20(3360): 0xb0bfcff0 		None     	IM	 Imm BFCF 	SH 3 	Rt X0
+0xD24(3364): 0x60606060 		None     	None	 1616928864
+0xD28(3368): 0x00000000 		hlt  	H	 0
+0xD2C(3372): 0x0808080f 		None     	H	 15
+0xD30(3376): 0x06060606 		None     	H	 6
+0xD34(3380): 0x06060606 		None     	H	 6
+0xD38(3384): 0x10101010 		None     	H	 16
+0xD3C(3388): 0x10101010 		None     	H	 16
+0xD40(3392): 0x60606060 		None     	None	 1616928864
+0xD44(3396): 0x60606060 		None     	None	 1616928864
+0xD48(3400): 0x08080808 		None     	H	 8
+0xD4C(3404): 0x08080808 		None     	H	 8
+0xD50(3408): 0x06060606 		None     	H	 6
+0xD54(3412): 0x0ff3fd0d 		None     	H	 13
+0xD58(3416): 0xf0101010 		None     	NOP	 4027584528
+0xD5C(3420): 0x00000000 		hlt  	H	 0
+0xD60(3424): 0x00000000 		hlt  	H	 0
+0xD64(3428): 0x00ffff00 		hlt  	H	 0
+0xD68(3432): 0xff000000 		None     	NOP	 4278190080
+0xD6C(3436): 0x00000000 		hlt  	H	 0
+0xD70(3440): 0x60606060 		None     	None	 1616928864
+0xD74(3444): 0xf0cfbfb0 		None     	NOP	 4040146864
+0xD78(3448): 0x0f080808 		None     	H	 8
+0xD7C(3452): 0x00000000 		hlt  	H	 0
+0xD80(3456): 0x38dcec00 		None     	R	 Rm 220 	SHAMT 236 	Rn X0 	Rd X0
+0xD84(3460): 0x0c0c0c14 		None     	H	 20
+0xD88(3464): 0x00000000 		hlt  	H	 0
+0xD8C(3468): 0xe060a0c0 		nop  	NOP	 3764428992
+0xD90(3472): 0x00ffff00 		hlt  	H	 0
+0xD94(3476): 0x00000000 		hlt  	H	 0
+0xD98(3480): 0x00000000 		hlt  	H	 0
+0xD9C(3484): 0x00ffffff 		hlt  	H	 255
+0xDA0(3488): 0x38776f00 		None     	R	 Rm 119 	SHAMT 111 	Rn X0 	Rd X0
+0xDA4(3492): 0x60606050 		None     	None	 1616928848
+0xDA8(3496): 0x00000000 		hlt  	H	 0
+0xDAC(3500): 0x0e0d0b07 		None     	H	 7
+0xDB0(3504): 0x0c0c0c0c 		None     	H	 12
+0xDB4(3508): 0x0c0c0c0c 		None     	H	 12
+0xDB8(3512): 0xe0e0e0e0 		nop  	NOP	 3772834016
+0xDBC(3516): 0xe0e0e0e0 		nop  	NOP	 3772834016
+0xDC0(3520): 0x60606060 		None     	None	 1616928864
+0xDC4(3524): 0x60606060 		None     	None	 1616928864
+0xDC8(3528): 0x0e0e0e0e 		None     	H	 14
+0xDCC(3532): 0x0e0e0e0e 		None     	H	 14
+0xDD0(3536): 0x140c0c0c 		None     	H	 12
+0xDD4(3540): 0x00ecdc38 		hlt  	H	 56
+0xDD8(3544): 0xc0a060e0 		ppu  	ME	 3231736032
+0xDDC(3548): 0x00000000 		hlt  	H	 0
+0xDE0(3552): 0x00000000 		hlt  	H	 0
+0xDE4(3556): 0x00ffff00 		hlt  	H	 0
+0xDE8(3560): 0xffffff00 		None     	NOP	 4294967040
+0xDEC(3564): 0x00000000 		hlt  	H	 0
+0xDF0(3568): 0x50606060 		stur 	D	 Imm 24672 	Rn X6 	Rd X0
+0xDF4(3572): 0x006f7738 		hlt  	H	 56
+0xDF8(3576): 0x070b0d0e 		None     	H	 14
+0xDFC(3580): 0x00000000 		hlt  	H	 0
+0xE00(3584): 0x00000000 		hlt  	H	 0
+0xE04(3588): 0x00000000 		hlt  	H	 0
+0xE08(3592): 0x00000000 		hlt  	H	 0
+0xE0C(3596): 0x00000000 		hlt  	H	 0
+0xE10(3600): 0x00000000 		hlt  	H	 0
+0xE14(3604): 0x00000000 		hlt  	H	 0
+0xE18(3608): 0x00000000 		hlt  	H	 0
+0xE1C(3612): 0x00000000 		hlt  	H	 0
+0xE20(3616): 0x00000000 		hlt  	H	 0
+0xE24(3620): 0x00000000 		hlt  	H	 0
+0xE28(3624): 0x00000000 		hlt  	H	 0
+0xE2C(3628): 0x00000000 		hlt  	H	 0
+0xE30(3632): 0x00000000 		hlt  	H	 0
+0xE34(3636): 0x00000000 		hlt  	H	 0
+0xE38(3640): 0x00000000 		hlt  	H	 0
+0xE3C(3644): 0x00000000 		hlt  	H	 0
+0xE40(3648): 0x00000000 		hlt  	H	 0
+0xE44(3652): 0x00000000 		hlt  	H	 0
+0xE48(3656): 0x00000000 		hlt  	H	 0
+0xE4C(3660): 0x00000000 		hlt  	H	 0
+0xE50(3664): 0x00000000 		hlt  	H	 0
+0xE54(3668): 0x00000000 		hlt  	H	 0
+0xE58(3672): 0x00000000 		hlt  	H	 0
+0xE5C(3676): 0x00000000 		hlt  	H	 0
+0xE60(3680): 0x7c381000 		None     	None	 2084048896
+0xE64(3684): 0x006cfafe 		hlt  	H	 254
+0xE68(3688): 0x00000000 		hlt  	H	 0
+0xE6C(3692): 0x00000400 		hlt  	H	 0
+0xE70(3696): 0x00606000 		hlt  	H	 0
+0xE74(3700): 0x0c1c1c18 		None     	H	 24
+0xE78(3704): 0x00606000 		hlt  	H	 0
+0xE7C(3708): 0x0c1c1c18 		None     	H	 24
+0xE80(3712): 0x7c081000 		None     	None	 2080903168
+0xE84(3716): 0x10087c7e 		None     	H	 126
+0xE88(3720): 0x7c081000 		None     	None	 2080903168
+0xE8C(3724): 0x10087c7e 		None     	H	 126
+0xE90(3728): 0x00000000 		hlt  	H	 0
+0xE94(3732): 0x18180000 		None     	H	 0
+0xE98(3736): 0x00000000 		hlt  	H	 0
+0xE9C(3740): 0x18180000 		None     	H	 0
+0xEA0(3744): 0x30102000 		None     	R	 Rm 16 	SHAMT 32 	Rn X0 	Rd X0
+0xEA4(3748): 0x00000030 		hlt  	H	 48
+0xEA8(3752): 0x30102000 		None     	R	 Rm 16 	SHAMT 32 	Rn X0 	Rd X0
+0xEAC(3756): 0x00000030 		hlt  	H	 48
+0xEB0(3760): 0x3c000000 		None     	R	 Rm 0 	SHAMT 0 	Rn X0 	Rd X0
+0xEB4(3764): 0x0000003c 		hlt  	H	 60
+0xEB8(3768): 0x3c000000 		None     	R	 Rm 0 	SHAMT 0 	Rn X0 	Rd X0
+0xEBC(3772): 0x0000003c 		hlt  	H	 60
+0xEC0(3776): 0x70e0fe00 		None     	None	 1893793280
+0xEC4(3780): 0xfe0e1c38 		None     	NOP	 4262337592
+0xEC8(3784): 0x70e0fe00 		None     	None	 1893793280
+0xECC(3788): 0xfe0e1c38 		None     	NOP	 4262337592
+0xED0(3792): 0x18181800 		None     	H	 0
+0xED4(3796): 0x6666663c 		None     	None	 1717986876
+0xED8(3800): 0x18181800 		None     	H	 0
+0xEDC(3804): 0x6666663c 		None     	None	 1717986876
+0xEE0(3808): 0x7ceec600 		None     	None	 2096023040
+0xEE4(3812): 0xc6ee7c38 		None     	ME	 3337518136
+0xEE8(3816): 0x7ceec600 		None     	None	 2096023040
+0xEEC(3820): 0xc6ee7c38 		None     	ME	 3337518136
+0xEF0(3824): 0xfeeec600 		None     	NOP	 4277061120
+0xEF4(3828): 0xc6c6d6fe 		None     	ME	 3334919934
+0xEF8(3832): 0xfeeec600 		None     	NOP	 4277061120
+0xEFC(3836): 0xc6c6d6fe 		None     	ME	 3334919934
+0xF00(3840): 0x7c381000 		None     	None	 2084048896
+0xF04(3844): 0xc6c6c6ee 		None     	ME	 3334915822
+0xF08(3848): 0x7c381000 		None     	None	 2084048896
+0xF0C(3852): 0xc6c6c6ee 		None     	ME	 3334915822
+0xF10(3856): 0xc6c67c00 		None     	ME	 3334896640
+0xF14(3860): 0xc6c6c6c6 		None     	ME	 3334915782
+0xF18(3864): 0xc6c67c00 		None     	ME	 3334896640
+0xF1C(3868): 0xc6c6c6c6 		None     	ME	 3334915782
+0xF20(3872): 0x18181800 		None     	H	 0
+0xF24(3876): 0x7e181818 		None     	None	 2115508248
+0xF28(3880): 0x18181800 		None     	H	 0
+0xF2C(3884): 0x7e181818 		None     	None	 2115508248
+0xF30(3888): 0x06c67c00 		None     	H	 0
+0xF34(3892): 0x78ccc07c 		None     	None	 2026684540
+0xF38(3896): 0x06c67c00 		None     	H	 0
+0xF3C(3900): 0x78ccc07c 		None     	None	 2026684540
+0xF40(3904): 0xf8dcce00 		None     	NOP	 4175220224
+0xF44(3908): 0xfcc6c6ce 		None     	NOP	 4240885454
+0xF48(3912): 0xf8dcce00 		None     	NOP	 4175220224
+0xF4C(3916): 0xfcc6c6ce 		None     	NOP	 4240885454
+0xF50(3920): 0xdecc7a00 		None     	ME	 3737942528
+0xF54(3924): 0x7cc6c6c6 		None     	None	 2093401798
+0xF58(3928): 0xdecc7a00 		None     	ME	 3737942528
+0xF5C(3932): 0x7cc6c6c6 		None     	None	 2093401798
+0xF60(3936): 0xfcc0c000 		None     	NOP	 4240490496
+0xF64(3940): 0xfcc6c6c6 		None     	NOP	 4240885446
+0xF68(3944): 0xfcc0c000 		None     	NOP	 4240490496
+0xF6C(3948): 0xfcc6c6c6 		None     	NOP	 4240885446
+0xF70(3952): 0xc6c67c00 		None     	ME	 3334896640
+0xF74(3956): 0x7cc6c6c6 		None     	None	 2093401798
+0xF78(3960): 0xc6c67c00 		None     	ME	 3334896640
+0xF7C(3964): 0x7cc6c6c6 		None     	None	 2093401798
+0xF80(3968): 0xdecec600 		None     	ME	 3738093056
+0xF84(3972): 0xc6e6f6fe 		None     	ME	 3337025278
+0xF88(3976): 0xdecec600 		None     	ME	 3738093056
+0xF8C(3980): 0xc6e6f6fe 		None     	ME	 3337025278
+0xF90(3984): 0xd6c6c600 		None     	ME	 3603351040
+0xF94(3988): 0xc6eefefe 		None     	ME	 3337551614
+0xF98(3992): 0xd6c6c600 		None     	ME	 3603351040
+0xF9C(3996): 0xc6eefefe 		None     	ME	 3337551614
+0xFA0(4000): 0x60607e00 		None     	None	 1616936448
+0xFA4(4004): 0x60606060 		None     	None	 1616928864
+0xFA8(4008): 0x60607e00 		None     	None	 1616936448
+0xFAC(4012): 0x60606060 		None     	None	 1616928864
+0xFB0(4016): 0xf8dcce00 		None     	NOP	 4175220224
+0xFB4(4020): 0xc6ccd8f0 		None     	ME	 3335313648
+0xFB8(4024): 0xf8dcce00 		None     	NOP	 4175220224
+0xFBC(4028): 0xc6ccd8f0 		None     	ME	 3335313648
+0xFC0(4032): 0xc6c67c00 		None     	ME	 3334896640
+0xFC4(4036): 0x1e060606 		None     	H	 6
+0xFC8(4040): 0xc6c67c00 		None     	ME	 3334896640
+0xFCC(4044): 0x1e060606 		None     	H	 6
+0xFD0(4048): 0x18187e00 		None     	H	 0
+0xFD4(4052): 0x7e181818 		None     	None	 2115508248
+0xFD8(4056): 0x18187e00 		None     	H	 0
+0xFDC(4060): 0x7e181818 		None     	None	 2115508248
+0xFE0(4064): 0xc6c6c600 		None     	ME	 3334915584
+0xFE4(4068): 0xc6c6c6fe 		None     	ME	 3334915838
+0xFE8(4072): 0xc6c6c600 		None     	ME	 3334915584
+0xFEC(4076): 0xc6c6c6fe 		None     	ME	 3334915838
+0xFF0(4080): 0xc6663e00 		None     	ME	 3328589312
+0xFF4(4084): 0x3e60c0ce 		None     	R	 Rm 96 	SHAMT 192 	Rn X12 	Rd XPC
+0xFF8(4088): 0xc6663e00 		None     	ME	 3328589312
+0xFFC(4092): 0x3e60c0ce 		None     	R	 Rm 96 	SHAMT 192 	Rn X12 	Rd XPC
+0x1000(4096): 0xc0c0c000 		ppu  	ME	 3233857536
+0x1004(4100): 0xfec0c0fc 		None     	NOP	 4274045180
+0x1008(4104): 0xc0c0c000 		ppu  	ME	 3233857536
+0x100C(4108): 0xfec0c0fc 		None     	NOP	 4274045180
+0x1010(4112): 0xc0c0fe00 		ppu  	ME	 3233873408
+0x1014(4116): 0xfec0c0fc 		None     	NOP	 4274045180
+0x1018(4120): 0xc0c0fe00 		ppu  	ME	 3233873408
+0x101C(4124): 0xfec0c0fc 		None     	NOP	 4274045180
+0x1020(4128): 0xc6ccf800 		None     	ME	 3335321600
+0x1024(4132): 0xf8ccc6c6 		None     	NOP	 4174169798
+0x1028(4136): 0xc6ccf800 		None     	ME	 3335321600
+0x102C(4140): 0xf8ccc6c6 		None     	NOP	 4174169798
+0x1030(4144): 0xc0663c00 		ppu  	ME	 3227925504
+0x1034(4148): 0x3c66c0c0 		None     	R	 Rm 102 	SHAMT 192 	Rn X12 	Rd X0
+0x1038(4152): 0xc0663c00 		ppu  	ME	 3227925504
+0x103C(4156): 0x3c66c0c0 		None     	R	 Rm 102 	SHAMT 192 	Rn X12 	Rd X0
+0x1040(4160): 0xc6c6fc00 		None     	ME	 3334929408
+0x1044(4164): 0xfcc6c6fc 		None     	NOP	 4240885500
+0x1048(4168): 0xc6c6fc00 		None     	ME	 3334929408
+0x104C(4172): 0xfcc6c6fc 		None     	NOP	 4240885500
+0x1050(4176): 0xfec6c600 		None     	NOP	 4274439680
+0x1054(4180): 0x386cc6c6 		None     	R	 Rm 108 	SHAMT 198 	Rn X12 	Rd X6
+0x1058(4184): 0xfec6c600 		None     	NOP	 4274439680
+0x105C(4188): 0x386cc6c6 		None     	R	 Rm 108 	SHAMT 198 	Rn X12 	Rd X6
+0x1060(4192): 0x060c7800 		None     	H	 0
+0x1064(4196): 0x7cc6c67e 		None     	None	 2093401726
+0x1068(4200): 0x060c7800 		None     	H	 0
+0x106C(4204): 0x7cc6c67e 		None     	None	 2093401726
+0x1070(4208): 0xc6c67c00 		None     	ME	 3334896640
+0x1074(4212): 0x7cc6c67c 		None     	None	 2093401724
+0x1078(4216): 0xc6c67c00 		None     	ME	 3334896640
+0x107C(4220): 0x7cc6c67c 		None     	None	 2093401724
+0x1080(4224): 0x30303000 		None     	R	 Rm 48 	SHAMT 48 	Rn X0 	Rd X0
+0x1084(4228): 0xfec60c18 		None     	NOP	 4274392088
+0x1088(4232): 0x30303000 		None     	R	 Rm 48 	SHAMT 48 	Rn X0 	Rd X0
+0x108C(4236): 0xfec60c18 		None     	NOP	 4274392088
+0x1090(4240): 0xc6c67c00 		None     	ME	 3334896640
+0x1094(4244): 0x3c60c0fc 		None     	R	 Rm 96 	SHAMT 192 	Rn XZR 	Rd X12
+0x1098(4248): 0xc6c67c00 		None     	ME	 3334896640
+0x109C(4252): 0x3c60c0fc 		None     	R	 Rm 96 	SHAMT 192 	Rn XZR 	Rd X12
+0x10A0(4256): 0x06c67c00 		None     	H	 0
+0x10A4(4260): 0xfcc0fc06 		None     	NOP	 4240505862
+0x10A8(4264): 0x06c67c00 		None     	H	 0
+0x10AC(4268): 0xfcc0fc06 		None     	NOP	 4240505862
+0x10B0(4272): 0xfe0c0c00 		None     	NOP	 4262202368
+0x10B4(4276): 0x1c3c6ccc 		None     	H	 204
+0x10B8(4280): 0xfe0c0c00 		None     	NOP	 4262202368
+0x10BC(4284): 0x1c3c6ccc 		None     	H	 204
+0x10C0(4288): 0x06c67c00 		None     	H	 0
+0x10C4(4292): 0x7e0c183c 		None     	None	 2114721852
+0x10C8(4296): 0x06c67c00 		None     	H	 0
+0x10CC(4300): 0x7e0c183c 		None     	None	 2114721852
+0x10D0(4304): 0x78e0fe00 		None     	None	 2028011008
+0x10D4(4308): 0x7cc60e3c 		None     	None	 2093354556
+0x10D8(4312): 0x78e0fe00 		None     	None	 2028011008
+0x10DC(4316): 0x7cc60e3c 		None     	None	 2093354556
+0x10E0(4320): 0x18187e00 		None     	H	 0
+0x10E4(4324): 0x18381818 		None     	H	 24
+0x10E8(4328): 0x18187e00 		None     	H	 0
+0x10EC(4332): 0x18381818 		None     	H	 24
+0x10F0(4336): 0xc6643800 		None     	ME	 3328456704
+0x10F4(4340): 0x384cc6c6 		None     	R	 Rm 76 	SHAMT 198 	Rn X12 	Rd X6
+0x10F8(4344): 0xc6643800 		None     	ME	 3328456704
+0x10FC(4348): 0x384cc6c6 		None     	R	 Rm 76 	SHAMT 198 	Rn X12 	Rd X6
+0x1100(4352): 0x00000000 		hlt  	H	 0
+0x1104(4356): 0x00000000 		hlt  	H	 0
+0x1108(4360): 0x00000000 		hlt  	H	 0
+0x110C(4364): 0x0f1c2a30 		None     	H	 48
+0x1110(4368): 0x00000000 		hlt  	H	 0
+0x1114(4372): 0x00000000 		hlt  	H	 0
+0x1118(4376): 0x00000000 		hlt  	H	 0
+0x111C(4380): 0x0f1c0030 		None     	H	 48
+0x1120(4384): 0x00000000 		hlt  	H	 0
+0x1124(4388): 0x00000000 		hlt  	H	 0
+0x1128(4392): 0x00000000 		hlt  	H	 0
+0x112C(4396): 0x00000000 		hlt  	H	 0
+0x1130(4400): 0x00000000 		hlt  	H	 0
+0x1134(4404): 0x00000000 		hlt  	H	 0
+0x1138(4408): 0x00000000 		hlt  	H	 0
+0x113C(4412): 0x00000000 		hlt  	H	 0
+0x1140(4416): 0x00000000 		hlt  	H	 0
+0x1144(4420): 0x00000000 		hlt  	H	 0
+0x1148(4424): 0x00000000 		hlt  	H	 0
+0x114C(4428): 0x00000000 		hlt  	H	 0
+0x1150(4432): 0x00000000 		hlt  	H	 0
+0x1154(4436): 0x00000000 		hlt  	H	 0
+0x1158(4440): 0x00000000 		hlt  	H	 0
+0x115C(4444): 0x00000000 		hlt  	H	 0
+0x1160(4448): 0x83727a67 		bne  	B	 branch to 0x00728BC7
+0x1164(4452): 0x7a677778 		None     	None	 2053601144
+0x1168(4456): 0x77678279 		None     	None	 2003272313
+0x116C(4460): 0x72838081 		None     	None	 1921220737
+0x1170(4464): 0x87778777 		bge  	B	 branch to 0x007798E7
+0x1174(4468): 0x78847a67 		None     	None	 2021948007
+0x1178(4472): 0x847a7787 		blt  	B	 branch to 0x007A88FF
+0x117C(4476): 0x807a8778 		b    	B	 branch to 0x007A98F4
+0x1180(4480): 0x77787979 		None     	None	 2004384121
+0x1184(4484): 0x7a787387 		None     	None	 2054714247
+0x1188(4488): 0x727a6780 		None     	None	 1920624512
+0x118C(4492): 0x87677071 		bge  	B	 branch to 0x006781FD
+0x1190(4496): 0x77777767 		None     	None	 2004318055
+0x1194(4500): 0x8367827a 		bne  	B	 branch to 0x0067940E
+0x1198(4504): 0x67876772 		None     	None	 1736927090
+0x119C(4508): 0x77827387 		None     	None	 2005037959
+0x11A0(4512): 0x67787983 		None     	None	 1735948675
+0x11A4(4516): 0x80817885 		b    	B	 branch to 0x-07E75D7
+0x11A8(4520): 0x79797a77 		None     	None	 2038004343
+0x11AC(4524): 0x72797a78 		None     	None	 1920563832
+0x11B0(4528): 0x7367727a 		None     	None	 1936159354
+0x11B4(4532): 0x67787378 		None     	None	 1735947128
+0x11B8(4536): 0x7a72797a 		None     	None	 2054322554
+0x11BC(4540): 0x67677875 		None     	None	 1734834293
+0x11C0(4544): 0x87788367 		bge  	B	 branch to 0x00789527
+0x11C4(4548): 0x70718767 		None     	None	 1886488423
+0x11C8(4552): 0x36363767 		None     	R	 Rm 54 	SHAMT 55 	Rn X6 	Rd X7
+0x11CC(4556): 0x36363636 		None     	R	 Rm 54 	SHAMT 54 	Rn X3 	Rd X6
+0x11D0(4560): 0x36363636 		None     	R	 Rm 54 	SHAMT 54 	Rn X3 	Rd X6
+0x11D4(4564): 0x3e3e3f35 		None     	R	 Rm 62 	SHAMT 63 	Rn X3 	Rd X5
+0x11D8(4568): 0x3e3e3e3e 		None     	R	 Rm 62 	SHAMT 62 	Rn X3 	Rd XPC
+0x11DC(4572): 0x873d3e3e 		bge  	B	 branch to 0x003D501A
+0x11E0(4576): 0x7283727a 		None     	None	 1921217146
+0x11E4(4580): 0x78797387 		None     	None	 2021225351
+0x11E8(4584): 0xffff3487 		None     	NOP	 4294915207
+0x11EC(4588): 0xffffffff 		None     	NOP	 4294967295
+0x11F0(4592): 0xffffffff 		None     	NOP	 4294967295
+0x11F4(4596): 0xffff3c33 		None     	NOP	 4294917171
+0x11F8(4600): 0xffffffff 		None     	NOP	 4294967295
+0x11FC(4604): 0x773bffff 		None     	None	 2000420863
+0x1200(4608): 0x87677879 		bge  	B	 branch to 0x00678A79
+0x1204(4612): 0x7a877885 		None     	None	 2055698565
+0x1208(4616): 0xffff3474 		None     	NOP	 4294915188
+0x120C(4620): 0xffffffff 		None     	NOP	 4294967295
+0x1210(4624): 0xffffffff 		None     	NOP	 4294967295
+0x1214(4628): 0x00ff3c33 		hlt  	H	 51
+0x1218(4632): 0x65660000 		None     	None	 1701183488
+0x121C(4636): 0x733bff64 		None     	None	 1933311844
+0x1220(4640): 0x72797a87 		None     	None	 1920563847
+0x1224(4644): 0x78757a67 		None     	None	 2020964967
+0x1228(4648): 0xffff3467 		None     	NOP	 4294915175
+0x122C(4652): 0xffffffff 		None     	NOP	 4294967295
+0x1230(4656): 0xffffffff 		None     	NOP	 4294967295
+0x1234(4660): 0xffff3c33 		None     	NOP	 4294917171
+0x1238(4664): 0xffffffff 		None     	NOP	 4294967295
+0x123C(4668): 0x833bffff 		bne  	B	 branch to 0x003C123B
+0x1240(4672): 0x3e3f7885 		None     	R	 Rm 63 	SHAMT 120 	Rn X8 	Rd X5
+0x1244(4676): 0x3e3e3e3e 		None     	R	 Rm 62 	SHAMT 62 	Rn X3 	Rd XPC
+0x1248(4680): 0xffff343d 		None     	NOP	 4294915133
+0x124C(4684): 0xffffffff 		None     	NOP	 4294967295
+0x1250(4688): 0xffffffff 		None     	NOP	 4294967295
+0x1254(4692): 0x00ff3c33 		hlt  	H	 51
+0x1258(4696): 0x5d5e0000 		None     	D	 Imm 24064 	Rn X0 	Rd X0
+0x125C(4700): 0x673bff5c 		None     	None	 1731985244
+0x1260(4704): 0xff3c8767 		None     	NOP	 4282156903
+0x1264(4708): 0xffffffff 		None     	NOP	 4294967295
+0x1268(4712): 0xffff343b 		None     	NOP	 4294915131
+0x126C(4716): 0xffffffff 		None     	NOP	 4294967295
+0x1270(4720): 0xffffffff 		None     	NOP	 4294967295
+0x1274(4724): 0xffff3c33 		None     	NOP	 4294917171
+0x1278(4728): 0x4d4effff 		None     	D	 Imm 20223 	Rn XZR 	Rd XZR
+0x127C(4732): 0x7a3bff4c 		None     	None	 2050752332
+0x1280(4736): 0x153c7778 		None     	H	 120
+0x1284(4740): 0x150e1f0e 		None     	H	 14
+0x1288(4744): 0xffff343b 		None     	NOP	 4294915131
+0x128C(4748): 0xffffffff 		None     	NOP	 4294967295
+0x1290(4752): 0xffffffff 		None     	NOP	 4294967295
+0x1294(4756): 0x00ff3c33 		hlt  	H	 51
+0x1298(4760): 0x54550000 		None     	D	 Imm 21760 	Rn X0 	Rd X0
+0x129C(4764): 0x7a3bff53 		None     	None	 2050752339
+0x12A0(4768): 0x393a7787 		None     	R	 Rm 58 	SHAMT 119 	Rn X8 	Rd X7
+0x12A4(4772): 0x39393939 		None     	R	 Rm 57 	SHAMT 57 	Rn X3 	Rd X9
+0x12A8(4776): 0xffff3438 		None     	NOP	 4294915128
+0x12AC(4780): 0xffffffff 		None     	NOP	 4294967295
+0x12B0(4784): 0xffffffff 		None     	NOP	 4294967295
+0x12B4(4788): 0xffff3c33 		None     	NOP	 4294917171
+0x12B8(4792): 0x4445ffff 		eori 	D	 Imm 17919 	Rn XZR 	Rd XZR
+0x12BC(4796): 0x813bff43 		beq  	B	 branch to 0x003C11FF
+0x12C0(4800): 0x37876777 		None     	R	 Rm 135 	SHAMT 103 	Rn X7 	Rd X7
+0x12C4(4804): 0x36363636 		None     	R	 Rm 54 	SHAMT 54 	Rn X3 	Rd X6
+0x12C8(4808): 0xffff3435 		None     	NOP	 4294915125
+0x12CC(4812): 0xffffffff 		None     	NOP	 4294967295
+0x12D0(4816): 0xffffffff 		None     	NOP	 4294967295
+0x12D4(4820): 0x00ff3c33 		hlt  	H	 51
+0x12D8(4824): 0x63ff0000 		None     	None	 1677656064
+0x12DC(4828): 0x713bff62 		None     	None	 1899757410
+0x12E0(4832): 0x34777873 		None     	R	 Rm 119 	SHAMT 120 	Rn X7 	Rd X3
+0x12E4(4836): 0xffffffff 		None     	NOP	 4294967295
+0x12E8(4840): 0xffff3433 		None     	NOP	 4294915123
+0x12EC(4844): 0xffffffff 		None     	NOP	 4294967295
+0x12F0(4848): 0xffffffff 		None     	NOP	 4294967295
+0x12F4(4852): 0xffff3c33 		None     	NOP	 4294917171
+0x12F8(4856): 0x61ffffff 		None     	None	 1644167167
+0x12FC(4860): 0x873bff60 		bge  	B	 branch to 0x003C125C
+0x1300(4864): 0x34727a80 		None     	R	 Rm 114 	SHAMT 122 	Rn X8 	Rd X0
+0x1304(4868): 0xffffffff 		None     	NOP	 4294967295
+0x1308(4872): 0xffff3433 		None     	NOP	 4294915123
+0x130C(4876): 0xffffffff 		None     	NOP	 4294967295
+0x1310(4880): 0xffffffff 		None     	NOP	 4294967295
+0x1314(4884): 0x00ff3c33 		hlt  	H	 51
+0x1318(4888): 0x57580000 		None     	D	 Imm 22528 	Rn X0 	Rd X0
+0x131C(4892): 0x773bff56 		None     	None	 2000420694
+0x1320(4896): 0x34788370 		None     	R	 Rm 120 	SHAMT 131 	Rn X7 	Rd X0
+0x1324(4900): 0xffffffff 		None     	NOP	 4294967295
+0x1328(4904): 0xffff3433 		None     	NOP	 4294915123
+0x132C(4908): 0xffffffff 		None     	NOP	 4294967295
+0x1330(4912): 0xffffffff 		None     	NOP	 4294967295
+0x1334(4916): 0xffff3c33 		None     	NOP	 4294917171
+0x1338(4920): 0x47ffffff 		None     	D	 Imm 65535 	Rn XZR 	Rd XZR
+0x133C(4924): 0x773bff46 		None     	None	 2000420678
+0x1340(4928): 0x3487727a 		None     	R	 Rm 135 	SHAMT 114 	Rn X7 	Rd X10
+0x1344(4932): 0xffffffff 		None     	NOP	 4294967295
+0x1348(4936): 0xffff3433 		None     	NOP	 4294915123
+0x134C(4940): 0xffffffff 		None     	NOP	 4294967295
+0x1350(4944): 0xffffffff 		None     	NOP	 4294967295
+0x1354(4948): 0x00ff3c33 		hlt  	H	 51
+0x1358(4952): 0x5a5b0000 		None     	D	 Imm 23296 	Rn X0 	Rd X0
+0x135C(4956): 0x673bff59 		None     	None	 1731985241
+0x1360(4960): 0x34728378 		None     	R	 Rm 114 	SHAMT 131 	Rn X7 	Rd X8
+0x1364(4964): 0x170e211d 		None     	H	 29
+0x1368(4968): 0xffff3433 		None     	NOP	 4294915123
+0x136C(4972): 0xffffffff 		None     	NOP	 4294967295
+0x1370(4976): 0xffffffff 		None     	NOP	 4294967295
+0x1374(4980): 0xffff3c33 		None     	NOP	 4294917171
+0x1378(4984): 0x4a4bffff 		None     	D	 Imm 19455 	Rn XZR 	Rd XZR
+0x137C(4988): 0x7a3bff49 		None     	None	 2050752329
+0x1380(4992): 0x32876778 		None     	R	 Rm 135 	SHAMT 103 	Rn X7 	Rd X8
+0x1384(4996): 0x31313131 		None     	R	 Rm 49 	SHAMT 49 	Rn X3 	Rd X1
+0x1388(5000): 0xffff3430 		None     	NOP	 4294915120
+0x138C(5004): 0xffffffff 		None     	NOP	 4294967295
+0x1390(5008): 0xffffffff 		None     	NOP	 4294967295
+0x1394(5012): 0x00ff3c33 		hlt  	H	 51
+0x1398(5016): 0x51520000 		sturb	D	 Imm 20992 	Rn X0 	Rd X0
+0x139C(5020): 0x7a3bff50 		None     	None	 2050752336
+0x13A0(5024): 0x79737883 		None     	None	 2037610627
+0x13A4(5028): 0x79797a78 		None     	None	 2038004344
+0x13A8(5032): 0xffff3478 		None     	NOP	 4294915192
+0x13AC(5036): 0xffffffff 		None     	NOP	 4294967295
+0x13B0(5040): 0xffffffff 		None     	NOP	 4294967295
+0x13B4(5044): 0xffff3c33 		None     	NOP	 4294917171
+0x13B8(5048): 0x4142ffff 		subi 	D	 Imm 17151 	Rn XZR 	Rd XZR
+0x13BC(5052): 0x7a3bff40 		None     	None	 2050752320
+0x13C0(5056): 0x3e3e3f77 		None     	R	 Rm 62 	SHAMT 63 	Rn X7 	Rd X7
+0x13C4(5060): 0x3e3e3e3e 		None     	R	 Rm 62 	SHAMT 62 	Rn X3 	Rd XPC
+0x13C8(5064): 0xffff343d 		None     	NOP	 4294915133
+0x13CC(5068): 0xffffffff 		None     	NOP	 4294967295
+0x13D0(5072): 0xffffffff 		None     	NOP	 4294967295
+0x13D4(5076): 0xffff3c33 		None     	NOP	 4294917171
+0x13D8(5080): 0xffffffff 		None     	NOP	 4294967295
+0x13DC(5084): 0x873bffff 		bge  	B	 branch to 0x003C13DB
+0x13E0(5088): 0xffff3c67 		None     	NOP	 4294917223
+0x13E4(5092): 0xffffffff 		None     	NOP	 4294967295
+0x13E8(5096): 0xffff343b 		None     	NOP	 4294915131
+0x13EC(5100): 0xffffffff 		None     	NOP	 4294967295
+0x13F0(5104): 0xffffffff 		None     	NOP	 4294967295
+0x13F4(5108): 0x6f5f3c33 		None     	None	 1868512307
+0x13F8(5112): 0x6b6c6d6e 		None     	None	 1802268014
+0x13FC(5116): 0x773b696a 		None     	None	 2000382314
+0x1400(5120): 0x00003c82 		hlt  	H	 130
+0x1404(5124): 0x00000000 		hlt  	H	 0
+0x1408(5128): 0xffff343b 		None     	NOP	 4294915131
+0x140C(5132): 0xffffffff 		None     	NOP	 4294967295
+0x1410(5136): 0xffffffff 		None     	NOP	 4294967295
+0x1414(5140): 0x39393a33 		None     	R	 Rm 57 	SHAMT 58 	Rn X3 	Rd X3
+0x1418(5144): 0x39393939 		None     	R	 Rm 57 	SHAMT 57 	Rn X3 	Rd X9
+0x141C(5148): 0x73383939 		None     	None	 1933064505
+0x1420(5152): 0x0eff3c67 		None     	H	 103
+0x1424(5156): 0x1c0c181b 		None     	H	 27
+0x1428(5160): 0xffff343b 		None     	NOP	 4294915131
+0x142C(5164): 0xffffffff 		None     	NOP	 4294967295
+0x1430(5168): 0xffffffff 		None     	NOP	 4294967295
+0x1434(5172): 0x797a8733 		None     	None	 2038073139
+0x1438(5176): 0x83808182 		bne  	B	 branch to 0x-07F6A46
+0x143C(5180): 0x797a7879 		None     	None	 2038069369
+0x1440(5184): 0xffff3c87 		None     	NOP	 4294917255
+0x1444(5188): 0xffffffff 		None     	NOP	 4294967295
+0x1448(5192): 0xffff343b 		None     	NOP	 4294915131
+0x144C(5196): 0xffffffff 		None     	NOP	 4294967295
+0x1450(5200): 0xffffffff 		None     	NOP	 4294967295
+0x1454(5204): 0x78797333 		None     	None	 2021225267
+0x1458(5208): 0x67707167 		None     	None	 1735422311
+0x145C(5212): 0x7879797a 		None     	None	 2021226874
+0x1460(5216): 0x00003c77 		hlt  	H	 119
+0x1464(5220): 0x00000000 		hlt  	H	 0
+0x1468(5224): 0x3131323b 		None     	R	 Rm 49 	SHAMT 50 	Rn X3 	Rd X11
+0x146C(5228): 0x31313131 		None     	R	 Rm 49 	SHAMT 49 	Rn X3 	Rd X1
+0x1470(5232): 0x31313131 		None     	R	 Rm 49 	SHAMT 49 	Rn X3 	Rd X1
+0x1474(5236): 0x3e3f8730 		None     	R	 Rm 63 	SHAMT 135 	Rn X3 	Rd X0
+0x1478(5240): 0x3e3e3e3e 		None     	R	 Rm 62 	SHAMT 62 	Rn X3 	Rd XPC
+0x147C(5244): 0x807a3d3e 		b    	B	 branch to 0x007A51BA
+0x1480(5248): 0xffff3c77 		None     	NOP	 4294917239
+0x1484(5252): 0x1d1819ff 		None     	H	 255
+0x1488(5256): 0x3e3e3f3b 		None     	R	 Rm 62 	SHAMT 63 	Rn X3 	Rd X11
+0x148C(5260): 0x3e3e3e3e 		None     	R	 Rm 62 	SHAMT 62 	Rn X3 	Rd XPC
+0x1490(5264): 0x3e3e3e3e 		None     	R	 Rm 62 	SHAMT 62 	Rn X3 	Rd XPC
+0x1494(5268): 0x0e3c773d 		None     	H	 61
+0x1498(5272): 0x241d2219 		mul  	R	 Rm 29 	SHAMT 34 	Rn X1 	Rd X9
+0x149C(5276): 0x77873bff 		None     	None	 2005351423
+0x14A0(5280): 0xffff3c67 		None     	NOP	 4294917223
+0x14A4(5284): 0xffffffff 		None     	NOP	 4294967295
+0x14A8(5288): 0xffff3c3b 		None     	NOP	 4294917179
+0x14AC(5292): 0x0e1c24ff 		None     	H	 255
+0x14B0(5296): 0xff151217 		None     	NOP	 4279570967
+0x14B4(5300): 0x393a773b 		None     	R	 Rm 58 	SHAMT 119 	Rn X3 	Rd X11
+0x14B8(5304): 0x39393939 		None     	R	 Rm 57 	SHAMT 57 	Rn X3 	Rd X9
+0x14BC(5308): 0x67773839 		None     	None	 1735866425
+0x14C0(5312): 0x39393a87 		None     	R	 Rm 57 	SHAMT 58 	Rn X8 	Rd X7
+0x14C4(5316): 0x39393939 		None     	R	 Rm 57 	SHAMT 57 	Rn X3 	Rd X9
+0x14C8(5320): 0x39393a38 		None     	R	 Rm 57 	SHAMT 58 	Rn X3 	Rd X8
+0x14CC(5324): 0x39393939 		None     	R	 Rm 57 	SHAMT 57 	Rn X3 	Rd X9
+0x14D0(5328): 0x39393939 		None     	R	 Rm 57 	SHAMT 57 	Rn X3 	Rd X9
+0x14D4(5332): 0x7a876738 		None     	None	 2055694136
+0x14D8(5336): 0x78847a82 		None     	None	 2021948034
+0x14DC(5340): 0x87727a87 		bge  	B	 branch to 0x00728F63
+0x14E0(5344): 0x78837885 		None     	None	 2021881989
+0x14E4(5348): 0x82797a87 		None     	B	 branch to 0x00798F6B
+0x14E8(5352): 0x827a8081 		None     	B	 branch to 0x007A9569
+0x14EC(5356): 0x8778847a 		bge  	B	 branch to 0x00789966
+0x14F0(5360): 0x7879797a 		None     	None	 2021226874
+0x14F4(5364): 0x87728387 		bge  	B	 branch to 0x0072987B
+0x14F8(5368): 0x87677873 		bge  	B	 branch to 0x00678D6B
+0x14FC(5372): 0x72838777 		None     	None	 1921222519
+0x1500(5376): 0x7a727a67 		None     	None	 2054322791
+0x1504(5380): 0x67877875 		None     	None	 1736931445
+0x1508(5384): 0x73877071 		None     	None	 1938255985
+0x150C(5388): 0x77876778 		None     	None	 2005362552
+0x1510(5392): 0x78837883 		None     	None	 2021881987
+0x1514(5396): 0x757a6777 		None     	None	 1970956151
+0x1518(5400): 0x72797a78 		None     	None	 1920563832
+0x151C(5404): 0x7a677777 		None     	None	 2053601143

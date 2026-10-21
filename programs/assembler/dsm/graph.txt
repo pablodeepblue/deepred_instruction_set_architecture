@@ -1,0 +1,83 @@
+-d 
+-i bin/graph.bin
+0x000(000): 0x4300e0f0 		orri 	D	 Imm 224 	Rn XZR 	Rd X0
+0x004(004): 0x4300f0f1 		orri 	D	 Imm 240 	Rn XZR 	Rd X1
+0x008(008): 0x430120f2 		orri 	D	 Imm 288 	Rn XZR 	Rd X2
+0x00C(012): 0x50000401 		stur 	D	 Imm 4 	Rn X0 	Rd X1
+0x010(016): 0x50000802 		stur 	D	 Imm 8 	Rn X0 	Rd X2
+0x014(020): 0x4300f0f0 		orri 	D	 Imm 240 	Rn XZR 	Rd X0
+0x018(024): 0x430100f1 		orri 	D	 Imm 256 	Rn XZR 	Rd X1
+0x01C(028): 0x430120f2 		orri 	D	 Imm 288 	Rn XZR 	Rd X2
+0x020(032): 0x50000401 		stur 	D	 Imm 4 	Rn X0 	Rd X1
+0x024(036): 0x50000802 		stur 	D	 Imm 8 	Rn X0 	Rd X2
+0x028(040): 0x430100f0 		orri 	D	 Imm 256 	Rn XZR 	Rd X0
+0x02C(044): 0x430110f1 		orri 	D	 Imm 272 	Rn XZR 	Rd X1
+0x030(048): 0x50000401 		stur 	D	 Imm 4 	Rn X0 	Rd X1
+0x034(052): 0x430120f0 		orri 	D	 Imm 288 	Rn XZR 	Rd X0
+0x038(056): 0x430110f1 		orri 	D	 Imm 272 	Rn XZR 	Rd X1
+0x03C(060): 0x50000401 		stur 	D	 Imm 4 	Rn X0 	Rd X1
+0x040(064): 0x430110f0 		orri 	D	 Imm 272 	Rn XZR 	Rd X0
+0x044(068): 0x430130f1 		orri 	D	 Imm 304 	Rn XZR 	Rd X1
+0x048(072): 0x50000401 		stur 	D	 Imm 4 	Rn X0 	Rd X1
+0x04C(076): 0x4300e0f0 		orri 	D	 Imm 224 	Rn XZR 	Rd X0
+0x050(080): 0x430140f9 		orri 	D	 Imm 320 	Rn XZR 	Rd X9
+0x054(084): 0xa100000a 		movz 	IM	 Imm 0000 	SH 0 	Rt X10
+0x058(088): 0x410064af 		subi 	D	 Imm 100 	Rn X10 	Rd XZR
+0x05C(092): 0x81000060 		beq  	B	 branch to 0x000000BC
+0x060(096): 0x45000008 		ldur 	D	 Imm 0 	Rn X0 	Rd X8
+0x064(100): 0x50000098 		stur 	D	 Imm 0 	Rn X9 	Rd X8
+0x068(104): 0x40000499 		addi 	D	 Imm 4 	Rn X9 	Rd X9
+0x06C(108): 0x4101300f 		subi 	D	 Imm 304 	Rn X0 	Rd XZR
+0x070(112): 0x83000008 		bne  	B	 branch to 0x00000078
+0x074(116): 0x80000048 		b    	B	 branch to 0x000000BC
+0x078(120): 0x260000fb 		orr  	R	 Rm 0 	SHAMT 0 	Rn XZR 	Rd X11
+0x07C(124): 0x410000bf 		subi 	D	 Imm 0 	Rn X11 	Rd XZR
+0x080(128): 0x8100002c 		beq  	B	 branch to 0x000000AC
+0x084(132): 0x400004bb 		addi 	D	 Imm 4 	Rn X11 	Rd X11
+0x088(136): 0x450000b1 		ldur 	D	 Imm 0 	Rn X11 	Rd X1
+0x08C(140): 0x4100001f 		subi 	D	 Imm 0 	Rn X1 	Rd XZR
+0x090(144): 0x81000010 		beq  	B	 branch to 0x000000A0
+0x094(148): 0x410004dd 		subi 	D	 Imm 4 	Rn XSP 	Rd XSP
+0x098(152): 0x500000d1 		stur 	D	 Imm 0 	Rn XSP 	Rd X1
+0x09C(156): 0x80000008 		b    	B	 branch to 0x000000A4
+0x0A0(160): 0x8000000c 		b    	B	 branch to 0x000000AC
+0x0A4(164): 0x400000bb 		addi 	D	 Imm 0 	Rn X11 	Rd X11
+0x0A8(168): 0x80ffffd4 		b    	B	 branch to 0x0000007C
+0x0AC(172): 0x450000d0 		ldur 	D	 Imm 0 	Rn XSP 	Rd X0
+0x0B0(176): 0x400004dd 		addi 	D	 Imm 4 	Rn XSP 	Rd XSP
+0x0B4(180): 0x400001aa 		addi 	D	 Imm 1 	Rn X10 	Rd X10
+0x0B8(184): 0x80ffffa0 		b    	B	 branch to 0x00000058
+0x0BC(188): 0xc1000000 		flu  	ME	 3238002688
+0x0C0(192): 0x00000000 		hlt  	H	 0
+0x0C4(196): 0x00000000 		hlt  	H	 0
+0x0C8(200): 0x00000000 		hlt  	H	 0
+0x0CC(204): 0x00000000 		hlt  	H	 0
+0x0D0(208): 0x00000000 		hlt  	H	 0
+0x0D4(212): 0x00000000 		hlt  	H	 0
+0x0D8(216): 0x00000000 		hlt  	H	 0
+0x0DC(220): 0x00000000 		hlt  	H	 0
+0x0E0(224): 0x00000001 		hlt  	H	 1
+0x0E4(228): 0x00000000 		hlt  	H	 0
+0x0E8(232): 0x00000000 		hlt  	H	 0
+0x0EC(236): 0x00000000 		hlt  	H	 0
+0x0F0(240): 0x00000002 		hlt  	H	 2
+0x0F4(244): 0x00000000 		hlt  	H	 0
+0x0F8(248): 0x00000000 		hlt  	H	 0
+0x0FC(252): 0x00000000 		hlt  	H	 0
+0x100(256): 0x00000003 		hlt  	H	 3
+0x104(260): 0x00000000 		hlt  	H	 0
+0x108(264): 0x00000000 		hlt  	H	 0
+0x10C(268): 0x00000000 		hlt  	H	 0
+0x110(272): 0x00000004 		hlt  	H	 4
+0x114(276): 0x00000000 		hlt  	H	 0
+0x118(280): 0x00000000 		hlt  	H	 0
+0x11C(284): 0x00000000 		hlt  	H	 0
+0x120(288): 0x00000005 		hlt  	H	 5
+0x124(292): 0x00000000 		hlt  	H	 0
+0x128(296): 0x00000000 		hlt  	H	 0
+0x12C(300): 0x00000000 		hlt  	H	 0
+0x130(304): 0x00000006 		hlt  	H	 6
+0x134(308): 0x00000000 		hlt  	H	 0
+0x138(312): 0x00000000 		hlt  	H	 0
+0x13C(316): 0x00000000 		hlt  	H	 0
+0x140(320): 0x00000000 		hlt  	H	 0

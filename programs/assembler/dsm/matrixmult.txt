@@ -1,0 +1,242 @@
+-d 
+-i bin/matrixmult.bin
+0x000(000): 0x4300a0f3 		orri 	D	 Imm 160 	Rn XZR 	Rd X3
+0x004(004): 0x430230f4 		orri 	D	 Imm 560 	Rn XZR 	Rd X4
+0x008(008): 0xa1000000 		movz 	IM	 Imm 0000 	SH 0 	Rt X0
+0x00C(012): 0x4100280f 		subi 	D	 Imm 40 	Rn X0 	Rd XZR
+0x010(016): 0x8100006c 		beq  	B	 branch to 0x0000007C
+0x014(020): 0xa1000001 		movz 	IM	 Imm 0000 	SH 0 	Rt X1
+0x018(024): 0x4100281f 		subi 	D	 Imm 40 	Rn X1 	Rd XZR
+0x01C(028): 0x81000054 		beq  	B	 branch to 0x00000070
+0x020(032): 0x260f00f8 		orr  	R	 Rm 15 	SHAMT 0 	Rn XZR 	Rd X8
+0x024(036): 0xa1000002 		movz 	IM	 Imm 0000 	SH 0 	Rt X2
+0x028(040): 0x4100282f 		subi 	D	 Imm 40 	Rn X2 	Rd XZR
+0x02C(044): 0x81000030 		beq  	B	 branch to 0x0000005C
+0x030(048): 0x20020069 		add  	R	 Rm 2 	SHAMT 0 	Rn X6 	Rd X9
+0x034(052): 0x20030099 		add  	R	 Rm 3 	SHAMT 0 	Rn X9 	Rd X9
+0x038(056): 0x2001007a 		add  	R	 Rm 1 	SHAMT 0 	Rn X7 	Rd X10
+0x03C(060): 0x200400aa 		add  	R	 Rm 4 	SHAMT 0 	Rn X10 	Rd X10
+0x040(064): 0x45000099 		ldur 	D	 Imm 0 	Rn X9 	Rd X9
+0x044(068): 0x450000aa 		ldur 	D	 Imm 0 	Rn X10 	Rd X10
+0x048(072): 0x240a009a 		mul  	R	 Rm 10 	SHAMT 0 	Rn X9 	Rd X10
+0x04C(076): 0x200a0088 		add  	R	 Rm 10 	SHAMT 0 	Rn X8 	Rd X8
+0x050(080): 0x40002877 		addi 	D	 Imm 40 	Rn X7 	Rd X7
+0x054(084): 0x40000422 		addi 	D	 Imm 4 	Rn X2 	Rd X2
+0x058(088): 0x80ffffd0 		b    	B	 branch to 0x00000028
+0x05C(092): 0x410004dd 		subi 	D	 Imm 4 	Rn XSP 	Rd XSP
+0x060(096): 0x500000d8 		stur 	D	 Imm 0 	Rn XSP 	Rd X8
+0x064(100): 0x260f00f7 		orr  	R	 Rm 15 	SHAMT 0 	Rn XZR 	Rd X7
+0x068(104): 0x40000411 		addi 	D	 Imm 4 	Rn X1 	Rd X1
+0x06C(108): 0x80ffffac 		b    	B	 branch to 0x00000018
+0x070(112): 0x40002866 		addi 	D	 Imm 40 	Rn X6 	Rd X6
+0x074(116): 0x40000400 		addi 	D	 Imm 4 	Rn X0 	Rd X0
+0x078(120): 0x80ffff94 		b    	B	 branch to 0x0000000C
+0x07C(124): 0xc1000000 		flu  	ME	 3238002688
+0x080(128): 0x00000000 		hlt  	H	 0
+0x084(132): 0x00000000 		hlt  	H	 0
+0x088(136): 0x00000000 		hlt  	H	 0
+0x08C(140): 0x00000000 		hlt  	H	 0
+0x090(144): 0x00000000 		hlt  	H	 0
+0x094(148): 0x00000000 		hlt  	H	 0
+0x098(152): 0x00000000 		hlt  	H	 0
+0x09C(156): 0x00000000 		hlt  	H	 0
+0x0A0(160): 0xfffffffc 		None     	NOP	 4294967292
+0x0A4(164): 0x00000001 		hlt  	H	 1
+0x0A8(168): 0xfffffffb 		None     	NOP	 4294967291
+0x0AC(172): 0x0000000a 		hlt  	H	 10
+0x0B0(176): 0x00000005 		hlt  	H	 5
+0x0B4(180): 0x00000006 		hlt  	H	 6
+0x0B8(184): 0x00000004 		hlt  	H	 4
+0x0BC(188): 0xfffffff9 		None     	NOP	 4294967289
+0x0C0(192): 0xfffffff8 		None     	NOP	 4294967288
+0x0C4(196): 0xfffffffe 		None     	NOP	 4294967294
+0x0C8(200): 0x00000008 		hlt  	H	 8
+0x0CC(204): 0xfffffff9 		None     	NOP	 4294967289
+0x0D0(208): 0x00000000 		hlt  	H	 0
+0x0D4(212): 0xfffffffb 		None     	NOP	 4294967291
+0x0D8(216): 0xfffffffc 		None     	NOP	 4294967292
+0x0DC(220): 0xfffffff6 		None     	NOP	 4294967286
+0x0E0(224): 0x00000003 		hlt  	H	 3
+0x0E4(228): 0x0000000a 		hlt  	H	 10
+0x0E8(232): 0x00000007 		hlt  	H	 7
+0x0EC(236): 0x00000005 		hlt  	H	 5
+0x0F0(240): 0x00000000 		hlt  	H	 0
+0x0F4(244): 0x00000006 		hlt  	H	 6
+0x0F8(248): 0xfffffffb 		None     	NOP	 4294967291
+0x0FC(252): 0x00000001 		hlt  	H	 1
+0x100(256): 0x0000000a 		hlt  	H	 10
+0x104(260): 0xfffffffb 		None     	NOP	 4294967291
+0x108(264): 0x00000001 		hlt  	H	 1
+0x10C(268): 0x0000000a 		hlt  	H	 10
+0x110(272): 0x00000007 		hlt  	H	 7
+0x114(276): 0x00000004 		hlt  	H	 4
+0x118(280): 0x00000000 		hlt  	H	 0
+0x11C(284): 0xfffffffe 		None     	NOP	 4294967294
+0x120(288): 0x00000007 		hlt  	H	 7
+0x124(292): 0xfffffffa 		None     	NOP	 4294967290
+0x128(296): 0xfffffff6 		None     	NOP	 4294967286
+0x12C(300): 0xfffffffc 		None     	NOP	 4294967292
+0x130(304): 0xfffffffe 		None     	NOP	 4294967294
+0x134(308): 0xfffffff8 		None     	NOP	 4294967288
+0x138(312): 0x00000003 		hlt  	H	 3
+0x13C(316): 0x0000000a 		hlt  	H	 10
+0x140(320): 0x00000004 		hlt  	H	 4
+0x144(324): 0xfffffffe 		None     	NOP	 4294967294
+0x148(328): 0xfffffff6 		None     	NOP	 4294967286
+0x14C(332): 0xfffffffe 		None     	NOP	 4294967294
+0x150(336): 0xfffffff8 		None     	NOP	 4294967288
+0x154(340): 0x00000000 		hlt  	H	 0
+0x158(344): 0xfffffff6 		None     	NOP	 4294967286
+0x15C(348): 0xfffffffd 		None     	NOP	 4294967293
+0x160(352): 0xfffffffe 		None     	NOP	 4294967294
+0x164(356): 0xfffffff7 		None     	NOP	 4294967287
+0x168(360): 0x00000007 		hlt  	H	 7
+0x16C(364): 0xfffffff6 		None     	NOP	 4294967286
+0x170(368): 0xfffffff6 		None     	NOP	 4294967286
+0x174(372): 0x00000002 		hlt  	H	 2
+0x178(376): 0xfffffff8 		None     	NOP	 4294967288
+0x17C(380): 0x00000001 		hlt  	H	 1
+0x180(384): 0xfffffffb 		None     	NOP	 4294967291
+0x184(388): 0x00000005 		hlt  	H	 5
+0x188(392): 0x00000000 		hlt  	H	 0
+0x18C(396): 0xfffffffe 		None     	NOP	 4294967294
+0x190(400): 0x00000007 		hlt  	H	 7
+0x194(404): 0x00000003 		hlt  	H	 3
+0x198(408): 0xfffffff6 		None     	NOP	 4294967286
+0x19C(412): 0xfffffffb 		None     	NOP	 4294967291
+0x1A0(416): 0xfffffffa 		None     	NOP	 4294967290
+0x1A4(420): 0xfffffff7 		None     	NOP	 4294967287
+0x1A8(424): 0xfffffffd 		None     	NOP	 4294967293
+0x1AC(428): 0x00000008 		hlt  	H	 8
+0x1B0(432): 0x00000007 		hlt  	H	 7
+0x1B4(436): 0x00000004 		hlt  	H	 4
+0x1B8(440): 0xfffffff8 		None     	NOP	 4294967288
+0x1BC(444): 0xfffffffd 		None     	NOP	 4294967293
+0x1C0(448): 0x00000006 		hlt  	H	 6
+0x1C4(452): 0xfffffff9 		None     	NOP	 4294967289
+0x1C8(456): 0xfffffff7 		None     	NOP	 4294967287
+0x1CC(460): 0x00000008 		hlt  	H	 8
+0x1D0(464): 0x00000006 		hlt  	H	 6
+0x1D4(468): 0x00000005 		hlt  	H	 5
+0x1D8(472): 0x00000007 		hlt  	H	 7
+0x1DC(476): 0x00000009 		hlt  	H	 9
+0x1E0(480): 0xfffffffb 		None     	NOP	 4294967291
+0x1E4(484): 0x00000001 		hlt  	H	 1
+0x1E8(488): 0x00000006 		hlt  	H	 6
+0x1EC(492): 0x00000008 		hlt  	H	 8
+0x1F0(496): 0x00000009 		hlt  	H	 9
+0x1F4(500): 0xfffffff6 		None     	NOP	 4294967286
+0x1F8(504): 0xfffffffc 		None     	NOP	 4294967292
+0x1FC(508): 0x00000008 		hlt  	H	 8
+0x200(512): 0x00000003 		hlt  	H	 3
+0x204(516): 0x00000009 		hlt  	H	 9
+0x208(520): 0xfffffff9 		None     	NOP	 4294967289
+0x20C(524): 0xfffffffd 		None     	NOP	 4294967293
+0x210(528): 0xfffffffa 		None     	NOP	 4294967290
+0x214(532): 0xfffffffa 		None     	NOP	 4294967290
+0x218(536): 0xfffffffd 		None     	NOP	 4294967293
+0x21C(540): 0x00000000 		hlt  	H	 0
+0x220(544): 0x00000007 		hlt  	H	 7
+0x224(548): 0xfffffffb 		None     	NOP	 4294967291
+0x228(552): 0x00000000 		hlt  	H	 0
+0x22C(556): 0x00000000 		hlt  	H	 0
+0x230(560): 0xfffffffb 		None     	NOP	 4294967291
+0x234(564): 0x00000003 		hlt  	H	 3
+0x238(568): 0xfffffff6 		None     	NOP	 4294967286
+0x23C(572): 0xfffffffb 		None     	NOP	 4294967291
+0x240(576): 0x00000004 		hlt  	H	 4
+0x244(580): 0x00000004 		hlt  	H	 4
+0x248(584): 0x00000000 		hlt  	H	 0
+0x24C(588): 0x00000003 		hlt  	H	 3
+0x250(592): 0x00000006 		hlt  	H	 6
+0x254(596): 0x00000001 		hlt  	H	 1
+0x258(600): 0xfffffffc 		None     	NOP	 4294967292
+0x25C(604): 0x00000007 		hlt  	H	 7
+0x260(608): 0xffffffff 		None     	NOP	 4294967295
+0x264(612): 0x00000008 		hlt  	H	 8
+0x268(616): 0xfffffff6 		None     	NOP	 4294967286
+0x26C(620): 0xfffffffe 		None     	NOP	 4294967294
+0x270(624): 0xfffffff9 		None     	NOP	 4294967289
+0x274(628): 0x00000007 		hlt  	H	 7
+0x278(632): 0x00000005 		hlt  	H	 5
+0x27C(636): 0x00000009 		hlt  	H	 9
+0x280(640): 0x00000000 		hlt  	H	 0
+0x284(644): 0x00000009 		hlt  	H	 9
+0x288(648): 0xfffffffc 		None     	NOP	 4294967292
+0x28C(652): 0xfffffff7 		None     	NOP	 4294967287
+0x290(656): 0x0000000a 		hlt  	H	 10
+0x294(660): 0xfffffffb 		None     	NOP	 4294967291
+0x298(664): 0xfffffffd 		None     	NOP	 4294967293
+0x29C(668): 0xffffffff 		None     	NOP	 4294967295
+0x2A0(672): 0xfffffffe 		None     	NOP	 4294967294
+0x2A4(676): 0x00000001 		hlt  	H	 1
+0x2A8(680): 0x00000001 		hlt  	H	 1
+0x2AC(684): 0x00000003 		hlt  	H	 3
+0x2B0(688): 0xfffffff8 		None     	NOP	 4294967288
+0x2B4(692): 0xfffffffe 		None     	NOP	 4294967294
+0x2B8(696): 0x00000006 		hlt  	H	 6
+0x2BC(700): 0xfffffffe 		None     	NOP	 4294967294
+0x2C0(704): 0x00000008 		hlt  	H	 8
+0x2C4(708): 0xfffffffe 		None     	NOP	 4294967294
+0x2C8(712): 0xfffffff6 		None     	NOP	 4294967286
+0x2CC(716): 0x00000007 		hlt  	H	 7
+0x2D0(720): 0x00000003 		hlt  	H	 3
+0x2D4(724): 0x00000000 		hlt  	H	 0
+0x2D8(728): 0x0000000a 		hlt  	H	 10
+0x2DC(732): 0xfffffff8 		None     	NOP	 4294967288
+0x2E0(736): 0x00000002 		hlt  	H	 2
+0x2E4(740): 0xffffffff 		None     	NOP	 4294967295
+0x2E8(744): 0xfffffffa 		None     	NOP	 4294967290
+0x2EC(748): 0x00000007 		hlt  	H	 7
+0x2F0(752): 0x0000000a 		hlt  	H	 10
+0x2F4(756): 0x00000001 		hlt  	H	 1
+0x2F8(760): 0xffffffff 		None     	NOP	 4294967295
+0x2FC(764): 0xffffffff 		None     	NOP	 4294967295
+0x300(768): 0x00000000 		hlt  	H	 0
+0x304(772): 0x00000007 		hlt  	H	 7
+0x308(776): 0xfffffff6 		None     	NOP	 4294967286
+0x30C(780): 0xfffffff8 		None     	NOP	 4294967288
+0x310(784): 0xfffffffb 		None     	NOP	 4294967291
+0x314(788): 0x00000008 		hlt  	H	 8
+0x318(792): 0x00000002 		hlt  	H	 2
+0x31C(796): 0x00000004 		hlt  	H	 4
+0x320(800): 0x00000008 		hlt  	H	 8
+0x324(804): 0xfffffff6 		None     	NOP	 4294967286
+0x328(808): 0xfffffff9 		None     	NOP	 4294967289
+0x32C(812): 0x00000007 		hlt  	H	 7
+0x330(816): 0xfffffff6 		None     	NOP	 4294967286
+0x334(820): 0xfffffffc 		None     	NOP	 4294967292
+0x338(824): 0xfffffffb 		None     	NOP	 4294967291
+0x33C(828): 0xfffffff7 		None     	NOP	 4294967287
+0x340(832): 0x00000008 		hlt  	H	 8
+0x344(836): 0xffffffff 		None     	NOP	 4294967295
+0x348(840): 0x00000003 		hlt  	H	 3
+0x34C(844): 0xfffffffe 		None     	NOP	 4294967294
+0x350(848): 0x00000004 		hlt  	H	 4
+0x354(852): 0x00000000 		hlt  	H	 0
+0x358(856): 0x00000005 		hlt  	H	 5
+0x35C(860): 0x00000001 		hlt  	H	 1
+0x360(864): 0x00000007 		hlt  	H	 7
+0x364(868): 0x00000008 		hlt  	H	 8
+0x368(872): 0xfffffffe 		None     	NOP	 4294967294
+0x36C(876): 0xfffffffc 		None     	NOP	 4294967292
+0x370(880): 0x00000008 		hlt  	H	 8
+0x374(884): 0x00000004 		hlt  	H	 4
+0x378(888): 0xfffffffa 		None     	NOP	 4294967290
+0x37C(892): 0x00000007 		hlt  	H	 7
+0x380(896): 0x00000000 		hlt  	H	 0
+0x384(900): 0x00000005 		hlt  	H	 5
+0x388(904): 0xfffffff9 		None     	NOP	 4294967289
+0x38C(908): 0x00000000 		hlt  	H	 0
+0x390(912): 0x00000003 		hlt  	H	 3
+0x394(916): 0x00000007 		hlt  	H	 7
+0x398(920): 0xffffffff 		None     	NOP	 4294967295
+0x39C(924): 0x00000008 		hlt  	H	 8
+0x3A0(928): 0xfffffffc 		None     	NOP	 4294967292
+0x3A4(932): 0xfffffff7 		None     	NOP	 4294967287
+0x3A8(936): 0x00000005 		hlt  	H	 5
+0x3AC(940): 0x00000007 		hlt  	H	 7
+0x3B0(944): 0x00000000 		hlt  	H	 0
+0x3B4(948): 0x00000005 		hlt  	H	 5
+0x3B8(952): 0xfffffff9 		None     	NOP	 4294967289
+0x3BC(956): 0xfffffff9 		None     	NOP	 4294967289
