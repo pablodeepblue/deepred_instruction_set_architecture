@@ -1,5 +1,11 @@
 # DEEPRED Instruction Set Architecture
 
+[![Build](https://github.com/pablodeepblue/deepred_instruction_set_architecture/actions/workflows/c-cpp.yml/badge.svg?branch=main)](https://github.com/pablodeepblue/deepred_instruction_set_architecture/actions/workflows/c-cpp.yml)
+![C++20](https://img.shields.io/badge/C%2B%2B-20-00599C?logo=c%2B%2B&logoColor=white)
+![Qt 6](https://img.shields.io/badge/Qt-6-41CD52?logo=qt&logoColor=white)
+![SDL3](https://img.shields.io/badge/SDL-3-1E6D9C)
+[![License](https://img.shields.io/github/license/pablodeepblue/deepred_instruction_set_architecture)](LICENSE)
+
 A 32-bit, ARM LEGv8-inspired instruction set architecture (ISA) simulator written in C++20. It was built as the final project for **CS535** by James Dolle and Pablo Ghezzi. It includes a pipeline simulator, a Qt desktop UI, and a Python assembler.
 
 **Desktop simulator interface**
